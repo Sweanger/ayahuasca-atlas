@@ -41,7 +41,8 @@
   ],
   "source_urls": [
    "http://fincadevida.com/",
-   "http://www.anacondaya.com/"
+   "http://www.anacondaya.com/",
+   "https://wa.link/"
   ],
   "review": null,
   "confidence": "low"
@@ -677,6 +678,65 @@
   "confidence": "medium"
  },
  {
+  "id": "google_places:aldeiarosadourada.org.br",
+  "name": "Aldeia Rosa Dourada",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:41.342661+00:00",
+  "last_checked": "2026-07-05T06:40:41.342661+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -10.3333333,
+  "lng": -53.2,
+  "geo_source": "nominatim:Brazil",
+  "country": "Brazil",
+  "region": null,
+  "city": null,
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "Roda de Cura (healing circle, every Thursday 20:00h)",
+   "Curso de Xamanismo (Shamanism courses)",
+   "Atendimentos (individual sessions)",
+   "Autoconhecimento (self-knowledge programs)"
+  ],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "unclear",
+  "lineage": [
+   "neo-shamanic",
+   "shamanism (xamanismo)"
+  ],
+  "healer_names": [
+   "Irineu Deliberalli"
+  ],
+  "healers_n": 1,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://aldeiarosadourada.org.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://aldeiarosadourada.org.br/"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
   "id": "web_search:aldeiadavidaoficial.com",
   "name": "Aldeia da Vida",
   "status": "active",
@@ -967,6 +1027,63 @@
   ],
   "review": null,
   "confidence": "low"
+ },
+ {
+  "id": "google_places:casacaminhodeluz.org.br",
+  "name": "Associação Beneficente Caminho de Luz",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.685711+00:00",
+  "last_checked": "2026-07-05T06:40:42.685711+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "religious",
+   "medical",
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -9.9765362,
+  "lng": -67.8220778,
+  "geo_source": "nominatim:Rio Branco, Acre, Brazil",
+  "country": "Brazil",
+  "region": "Acre",
+  "city": "Rio Branco",
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [
+   "Ayahuasca (Hoasca/Vegetal — Banisteriopsis caapi + Psychotria viridis)"
+  ],
+  "services": [],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [
+   "vegetalismo/mestizo",
+   "Hoasca/Vegetal"
+  ],
+  "healer_names": [
+   "José Muniz de Oliveira"
+  ],
+  "healers_n": 1,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://casacaminhodeluz.org.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://casacaminhodeluz.org.br/"
+  ],
+  "review": null,
+  "confidence": "medium"
  },
  {
   "id": "ayaadvisors:ayawakening-ayahuasca-mastermind",
@@ -1543,6 +1660,110 @@
   "confidence": "medium"
  },
  {
+  "id": "google_places:ceusagrado.com.br",
+  "name": "Centro Espiritual Céu Sagrado",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.349829+00:00",
+  "last_checked": "2026-07-05T06:40:42.349829+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -23.5003451,
+  "lng": -47.4582864,
+  "geo_source": "nominatim:Sorocaba, São Paulo, Brazil",
+  "country": "Brazil",
+  "region": "São Paulo",
+  "city": "Sorocaba",
+  "setting": "urban-adjacent",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [
+   "Santo Daime"
+  ],
+  "healer_names": [
+   "Fernando Dini Neto"
+  ],
+  "healers_n": 1,
+  "dieta": null,
+  "screening": true,
+  "ssri_policy": true,
+  "scholarships": null,
+  "website": "https://ceusagrado.com.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://ceusagrado.com.br/"
+  ],
+  "review": null,
+  "confidence": "medium"
+ },
+ {
+  "id": "google_places:barquinha.blogspot.com.br",
+  "name": "Centro Espírita Beneficente São Francisco das Chagas - Barquinha Missão de Luz",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:41.621166+00:00",
+  "last_checked": "2026-07-05T06:40:41.621166+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -10.3333333,
+  "lng": -53.2,
+  "geo_source": "nominatim:Brazil",
+  "country": "Brazil",
+  "region": null,
+  "city": null,
+  "setting": null,
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "unclear",
+  "lineage": [
+   "Barquinha"
+  ],
+  "healer_names": [
+   "Mestre Sabá"
+  ],
+  "healers_n": 1,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://barquinha.blogspot.com.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://barquinha.blogspot.com.br/"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
   "id": "web_search:udv.org.br",
   "name": "Centro Espírita Beneficente União do Vegetal (UDV)",
   "status": "active",
@@ -1595,6 +1816,56 @@
   ],
   "source_urls": [
    "https://udv.org.br/"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
+  "id": "google_places:daimemontanhasagrada.com",
+  "name": "Centro de Iluminação Cristã Luz Universal Montanha Sagrada (CICLUMS)",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.680535+00:00",
+  "last_checked": "2026-07-05T06:40:42.680535+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -23.1177393,
+  "lng": -46.5547861,
+  "geo_source": "nominatim:Atibaia, São Paulo, Brazil",
+  "country": "Brazil",
+  "region": "São Paulo",
+  "city": "Atibaia",
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [
+   "Santo Daime"
+  ],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": null,
+  "scholarships": null,
+  "website": "http://www.daimemontanhasagrada.com/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://www.daimemontanhasagrada.com/"
   ],
   "review": null,
   "confidence": "low"
@@ -1654,6 +1925,114 @@
   ],
   "source_urls": [
    "https://chamadodafloresta.com.br/"
+  ],
+  "review": null,
+  "confidence": "medium"
+ },
+ {
+  "id": "google_places:ceusagradocoracao.com.br",
+  "name": "Céu Sagrado Coração do Amor Divino",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.368080+00:00",
+  "last_checked": "2026-07-05T06:40:42.368080+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "religious",
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -23.7080345,
+  "lng": -46.5506747,
+  "geo_source": "nominatim:São Bernardo do Campo, São Paulo, Brazil",
+  "country": "Brazil",
+  "region": "São Paulo",
+  "city": "São Bernardo do Campo",
+  "setting": "urban-adjacent",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "meditation sessions"
+  ],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "unclear",
+  "lineage": [
+   "neo-shamanic"
+  ],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": null,
+  "scholarships": null,
+  "website": "https://ceusagradocoracao.com.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://ceusagradocoracao.com.br/"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
+  "id": "google_places:ceudanovavida.com.br",
+  "name": "Céu da Nova Vida",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.475243+00:00",
+  "last_checked": "2026-07-05T06:40:42.475243+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -25.4288223,
+  "lng": -49.2715492,
+  "geo_source": "nominatim:Pinhais / Curitiba, Paraná, Brazil",
+  "country": "Brazil",
+  "region": "Paraná",
+  "city": "Pinhais / Curitiba",
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "Emergency Assistance",
+   "Messengers of Love"
+  ],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [
+   "Santo Daime"
+  ],
+  "healer_names": [
+   "André Volpe"
+  ],
+  "healers_n": 1,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://www.ceudanovavida.com.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://www.ceudanovavida.com.br/"
   ],
   "review": null,
   "confidence": "medium"
@@ -2148,6 +2527,60 @@
   "confidence": "medium"
  },
  {
+  "id": "google_places:novaconsciencia.org",
+  "name": "Fraternidade Nova Consciência",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:41.597578+00:00",
+  "last_checked": "2026-07-05T06:40:41.597578+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -23.5506507,
+  "lng": -46.6333824,
+  "geo_source": "nominatim:São Paulo, São Paulo, Brazil",
+  "country": "Brazil",
+  "region": "São Paulo",
+  "city": "São Paulo",
+  "setting": "urban-adjacent",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "Workshop Conhecimento, Consciência e Transformação",
+   "Plantão de Apoio",
+   "Alimentação Saudável (healthy food program)",
+   "Social projects"
+  ],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": true,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://novaconsciencia.org/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://novaconsciencia.org/"
+  ],
+  "review": null,
+  "confidence": "medium"
+ },
+ {
   "id": "retreatguru:5010",
   "name": "Gaya Kali Center",
   "status": "active",
@@ -2397,6 +2830,62 @@
   "confidence": "low"
  },
  {
+  "id": "google_places:ayahuascaluz.com.br",
+  "name": "Instituto Ayahuasca Luz",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.445284+00:00",
+  "last_checked": "2026-07-05T06:40:42.445284+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -25.4295963,
+  "lng": -49.2712724,
+  "geo_source": "nominatim:Curitiba, Paraná, Brazil",
+  "country": "Brazil",
+  "region": "Paraná",
+  "city": "Curitiba",
+  "setting": "urban-adjacent",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": 23.38,
+  "price_total_max": 23.38,
+  "currency": "BRL",
+  "nights": [],
+  "medicines": [
+   "sananga"
+  ],
+  "services": [],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [
+   "neo-shamanic",
+   "universalist"
+  ],
+  "healer_names": [
+   "Flávio A. Alves Gama"
+  ],
+  "healers_n": 1,
+  "dieta": false,
+  "screening": true,
+  "ssri_policy": true,
+  "scholarships": null,
+  "website": "http://ayahuascaluz.com.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://ayahuascaluz.com.br/",
+   "https://www.ayahuascaluz.com.br/programacao"
+  ],
+  "review": null,
+  "confidence": "high"
+ },
+ {
   "id": "google_places:institutogoldenprana.com.br",
   "name": "Instituto Golden Prana",
   "status": "active",
@@ -2524,6 +3013,69 @@
    "count": null,
    "url": "https://institutomee.com.br/"
   },
+  "confidence": "medium"
+ },
+ {
+  "id": "google_places:ninhodajiboia.com.br",
+  "name": "Instituto Ninho da Jiboia",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:41.880934+00:00",
+  "last_checked": "2026-07-05T06:40:41.880934+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -23.5506507,
+  "lng": -46.6333824,
+  "geo_source": "nominatim:São Paulo, São Paulo, Brazil",
+  "country": "Brazil",
+  "region": "São Paulo",
+  "city": "São Paulo",
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [
+   "rapé"
+  ],
+  "services": [
+   "sound healing",
+   "individual ceremony (Divina Presença)",
+   "individual session focused on Sacred Feminine (Consciência Divina)",
+   "Oracle sessions (Oráculos)",
+   "Rapé ceremony (Roda de Rapé)"
+  ],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [
+   "neo-shamanic",
+   "Universalista"
+  ],
+  "healer_names": [
+   "Juliana Reis",
+   "Nahil Freitas"
+  ],
+  "healers_n": 2,
+  "dieta": false,
+  "screening": false,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://ninhodajiboia.com.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://ninhodajiboia.com.br/"
+  ],
+  "review": null,
   "confidence": "medium"
  },
  {
@@ -3713,6 +4265,58 @@
   "confidence": "medium"
  },
  {
+  "id": "google_places:uniaoestrelaguia.com.br",
+  "name": "União Estrela Guia",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.361661+00:00",
+  "last_checked": "2026-07-05T06:40:42.361661+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -10.3333333,
+  "lng": -53.2,
+  "geo_source": "nominatim:Brazil",
+  "country": "Brazil",
+  "region": null,
+  "city": null,
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [
+   "Santo Daime"
+  ],
+  "healer_names": [
+   "Eduardo"
+  ],
+  "healers_n": 1,
+  "dieta": null,
+  "screening": false,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://www.uniaoestrelaguia.com.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://www.uniaoestrelaguia.com.br/"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
   "id": "retreatguru:6698",
   "name": "Uní Retreats",
   "status": "active",
@@ -3880,6 +4484,70 @@
    "count": 4,
    "url": "https://ayaadvisors.org/listing/vivacre-retreat/"
   },
+  "confidence": "medium"
+ },
+ {
+  "id": "google_places:xamanismoseteraios.com.br",
+  "name": "Xamanismo Sete Raios",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.566436+00:00",
+  "last_checked": "2026-07-05T06:40:42.566436+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": -23.5506507,
+  "lng": -46.6333824,
+  "geo_source": "nominatim:São Paulo, São Paulo, Brazil",
+  "country": "Brazil",
+  "region": "São Paulo",
+  "city": "São Paulo",
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [
+   "Plantas Mestras",
+   "Medicinas da Floresta",
+   "Plantas de Poder"
+  ],
+  "services": [
+   "Curso Presencial de Xamanismo",
+   "Curso Online de Xamanismo",
+   "Retiro Sopro Ancestral",
+   "Cerimônia Sopro Ancestral",
+   "Atendimentos terapêuticos presenciais"
+  ],
+  "languages": [
+   "Portuguese"
+  ],
+  "indigenous": "trained-in-lineage-non-indigenous",
+  "lineage": [
+   "neo-shamanic",
+   "vegetalismo/mestizo"
+  ],
+  "healer_names": [
+   "Felipe Rocha"
+  ],
+  "healers_n": 1,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://xamanismoseteraios.com.br/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://xamanismoseteraios.com.br/"
+  ],
+  "review": null,
   "confidence": "medium"
  },
  {
@@ -5010,6 +5678,60 @@
   "confidence": "medium"
  },
  {
+  "id": "google_places:aguablancaretiros.com",
+  "name": "Agua Blanca Casa de Retiros",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.724336+00:00",
+  "last_checked": "2026-07-05T06:40:42.724336+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": 4.6533817,
+  "lng": -74.0836331,
+  "geo_source": "nominatim:Bogotá, Colombia",
+  "country": "Colombia",
+  "region": null,
+  "city": "Bogotá",
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "meditation spaces",
+   "yoga classes",
+   "accommodation",
+   "food/catering"
+  ],
+  "languages": [
+   "Spanish"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://www.aguablancaretiros.com/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://www.aguablancaretiros.com/",
+   "https://www.aguablancaretiros.com/about-7"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
   "id": "retreatguru:7439",
   "name": "Amazonka TV",
   "status": "active",
@@ -5538,8 +6260,8 @@
   "confidence": "medium"
  },
  {
-  "id": "retreatguru:6591",
-  "name": "Ayahuasca Spirit Colombia",
+  "id": "web_search:ayahuasca-retreat-colombia.com",
+  "name": "Ayahuasca Spirit Colombia (Ayahuasca Retreat Colombia)",
   "status": "active",
   "date_added": "2026-07-03T03:34:13.892335+00:00",
   "last_checked": "2026-07-03T03:34:13.892335+00:00",
@@ -5556,22 +6278,31 @@
   "region": "Antioquia",
   "city": "Medellín",
   "setting": "jungle",
-  "price_night_min": 20,
-  "price_night_max": 1399,
-  "price_total_min": 138,
-  "price_total_max": 1399,
-  "currency": "USD",
+  "price_night_min": 21,
+  "price_night_max": 1418,
+  "price_total_min": 144.74,
+  "price_total_max": 1418.47,
+  "currency": "COP",
   "nights": [
    1,
+   2,
    3,
-   4,
-   7
+   7,
+   4
   ],
   "medicines": [
+   "Kambo (frog medicine)",
+   "Rapé (tobacco/rapé)",
    "rapé",
    "kambo"
   ],
   "services": [
+   "Breathwork",
+   "Integration circles",
+   "Nature immersion / hikes",
+   "Live music during ceremonies",
+   "Private retreat option",
+   "Jungle excursions",
    "live music",
    "daily activities",
    "spa",
@@ -5584,29 +6315,45 @@
    "bicycles for rent"
   ],
   "languages": [
-   "German",
    "English",
+   "German",
    "Spanish"
   ],
-  "indigenous": "unclear",
-  "lineage": [],
+  "indigenous": "indigenous-healers-on-staff",
+  "lineage": [
+   "Kamëntšá Biyá / Kamentsa",
+   "vegetalismo/indigenous Colombian"
+  ],
   "healer_names": [
+   "Sergio Henao",
+   "Mama Concha",
+   "Taita Guillermo",
+   "Taita Miguel",
+   "Jessica Greiner",
+   "Vanessa",
    "Jessica",
    "Sergio",
    "Vanessa",
    "Jaime",
    "Yulian"
   ],
-  "healers_n": 5,
-  "dieta": null,
-  "screening": false,
-  "ssri_policy": false,
+  "healers_n": 11,
+  "dieta": false,
+  "screening": true,
+  "ssri_policy": true,
   "scholarships": null,
-  "website": "https://ayahuasca-retreat-colombia.com/",
+  "website": "https://ayahuasca-retreat-colombia.com/en",
   "sources": [
-   "retreatguru"
+   "retreatguru",
+   "web_search"
   ],
   "source_urls": [
+   "https://ayahuasca-retreat-colombia.com/en",
+   "https://ayahuasca-retreat-colombia.com/en/ayahuasca-retreat-3-days",
+   "https://ayahuasca-retreat-colombia.com/en/ayahuasca-retreat-4-days",
+   "https://ayahuasca-retreat-colombia.com/en/ceremony",
+   "https://ayahuasca-retreat-colombia.com/en/dates",
+   "https://ayahuasca-retreat-colombia.com/en/jungle-trip",
    "https://retreat.guru/centers/6591-1/ayahuasca-spirit-colombia-"
   ],
   "review": {
@@ -5615,7 +6362,7 @@
    "count": 7,
    "url": "https://retreat.guru/centers/6591-1/ayahuasca-spirit-colombia-"
   },
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "id": "retreatguru:4881",
@@ -5652,7 +6399,8 @@
    "yagé/ayahuasca (also referred to as yagé)",
    "preparatory plants",
    "plant baths",
-   "yagé/ayahuasca"
+   "yagé/ayahuasca",
+   "purification rituals"
   ],
   "services": [
    "Massage therapy",
@@ -5670,7 +6418,10 @@
    "Private ensuite cabins with outdoor soaking tub and hammock (detox retreat)",
    "Floral/plant baths (purification rituals)",
    "Medicine music (live, ceremonial)",
-   "Doctor-supervised detox (10-day retreat)"
+   "Doctor-supervised detox (10-day retreat)",
+   "Private accommodation (on request)",
+   "Medicine music (live)",
+   "Detox nutrition protocol (detox retreat)"
   ],
   "languages": [
    "Spanish",
@@ -5701,9 +6452,15 @@
    "Samuel Vélez",
    "Andrea Díaz",
    "Dr. Marta Turpin",
+   "Camilo Campo",
+   "Taita Diego Marmolejo",
+   "Taita Carlos Marmolejo",
+   "Samuel Vélez",
+   "Andrea Díaz",
+   "Dr. Marta Turpin",
    "Camilo Campo"
   ],
-  "healers_n": 18,
+  "healers_n": 24,
   "dieta": true,
   "screening": true,
   "ssri_policy": true,
@@ -5712,7 +6469,8 @@
   "sources": [
    "ayaadvisors",
    "retreatguru",
-   "thirdwave"
+   "thirdwave",
+   "web_search"
   ],
   "source_urls": [
    "https://caminoalsol.com/about",
@@ -5780,6 +6538,54 @@
   ],
   "source_urls": [
    "https://casarenacer.com/"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
+  "id": "google_places:cea.corpoamazonia.gov.co",
+  "name": "Centro Experimental Amazónico (CEA)",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.650473+00:00",
+  "last_checked": "2026-07-05T06:40:42.650473+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "other"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": 1.1466295,
+  "lng": -76.6482327,
+  "geo_source": "nominatim:Mocoa, Putumayo, Colombia",
+  "country": "Colombia",
+  "region": "Putumayo",
+  "city": "Mocoa",
+  "setting": "jungle",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [],
+  "languages": [
+   "Spanish"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://cea.corpoamazonia.gov.co/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://cea.corpoamazonia.gov.co/"
   ],
   "review": null,
   "confidence": "low"
@@ -5913,6 +6719,102 @@
    "url": "https://retreat.guru/centers/7537-1/cloud-forest-yag"
   },
   "confidence": "low"
+ },
+ {
+  "id": "web_search:colibrigarden.com",
+  "name": "Colibri Garden",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.251646+00:00",
+  "last_checked": "2026-07-05T06:40:42.251646+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": 6.2697324,
+  "lng": -75.6025597,
+  "geo_source": "nominatim:Medellin, Antioquia, Colombia",
+  "country": "Colombia",
+  "region": "Antioquia",
+  "city": "Medellin",
+  "setting": "mountain",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [
+   4,
+   10
+  ],
+  "medicines": [
+   "huachuma (San Pedro)",
+   "kambo",
+   "bufo alvarius (5-MeO-DMT)",
+   "psilocybin mushrooms",
+   "rapé",
+   "mambe",
+   "ambil",
+   "cacao",
+   "wilka",
+   "Dragon's Blood",
+   "Chilcuague"
+  ],
+  "services": [
+   "temazcal/sweat lodge (inipi)",
+   "breathwork",
+   "cold water immersion",
+   "plant baths",
+   "medicine music",
+   "group coaching circles",
+   "sharing circles",
+   "1:1 integration coaching (ongoing program)",
+   "monthly online integration circle (Zoom)",
+   "transport to/from Medellin",
+   "jungle walks and wildlife spotting (Jungle Expedition)",
+   "bespoke/private group retreats"
+  ],
+  "languages": [
+   "English",
+   "Spanish"
+  ],
+  "indigenous": "indigenous-healers-on-staff",
+  "lineage": [
+   "Awá (Putumayo, Colombia)",
+   "Mexhica Toltec",
+   "Mesa Andina (Huachuma/San Pedro)"
+  ],
+  "healer_names": [
+   "Taita Giovanni (Giovani)",
+   "Abuela Gloria Gonzáles",
+   "Ivaylo",
+   "Jué Karollys",
+   "Susana Karollys",
+   "Juan Pablo Correa",
+   "Mags Tanev"
+  ],
+  "healers_n": 7,
+  "dieta": true,
+  "screening": true,
+  "ssri_policy": true,
+  "scholarships": false,
+  "website": "https://www.colibrigarden.com",
+  "sources": [
+   "web_search"
+  ],
+  "source_urls": [
+   "https://www.colibrigarden.com/",
+   "https://www.colibrigarden.com/about",
+   "https://www.colibrigarden.com/contact",
+   "https://www.colibrigarden.com/experiences",
+   "https://www.colibrigarden.com/faqs",
+   "https://www.colibrigarden.com/integration",
+   "https://www.colibrigarden.com/retreats"
+  ],
+  "review": null,
+  "confidence": "high"
  },
  {
   "id": "google_places:detoxretreatscolombia.com",
@@ -6144,6 +7046,67 @@
    "url": "https://ayaadvisors.org/listing/eagle-condor-alliance/"
   },
   "confidence": "high"
+ },
+ {
+  "id": "google_places:ecoturismoputumayo.com",
+  "name": "Ecoturismo Putumayo",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.507793+00:00",
+  "last_checked": "2026-07-05T06:40:42.507793+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "other"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": 1.1466295,
+  "lng": -76.6482327,
+  "geo_source": "nominatim:Mocoa, Putumayo, Colombia",
+  "country": "Colombia",
+  "region": "Putumayo",
+  "city": "Mocoa",
+  "setting": "jungle",
+  "price_night_min": 90,
+  "price_night_max": 235,
+  "price_total_min": 358.96,
+  "price_total_max": 705.18,
+  "currency": "COP",
+  "nights": [
+   3,
+   4
+  ],
+  "medicines": [
+   "yagé",
+   "ayahuasca"
+  ],
+  "services": [
+   "birdwatching",
+   "ecotourism excursions",
+   "waterfall visits",
+   "tubing (Rio Caqueta)",
+   "canyon tours (Canon Mandiyaco)"
+  ],
+  "languages": [
+   "Spanish"
+  ],
+  "indigenous": "unclear",
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://www.ecoturismoputumayo.com/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://www.ecoturismoputumayo.com/"
+  ],
+  "review": null,
+  "confidence": "low"
  },
  {
   "id": "ayaadvisors:el-camino-sagrado",
@@ -7618,7 +8581,7 @@
   "confidence": "medium"
  },
  {
-  "id": "retreatguru:898",
+  "id": "web_search:origensagrada.com",
   "name": "Origen Sagrada",
   "status": "active",
   "date_added": "2026-07-03T03:34:21.907848+00:00",
@@ -7634,24 +8597,33 @@
   "lng": null,
   "geo_source": null,
   "country": "Colombia",
-  "region": "Antioquia",
-  "city": "San Roque / Medellín",
+  "region": "Antioquia / Putumayo",
+  "city": "San Roque (Antioquia); Puerto Asis / Mocoa (Putumayo)",
   "setting": "jungle",
-  "price_night_min": 71,
-  "price_night_max": 193,
-  "price_total_min": 500,
-  "price_total_max": 1350,
+  "price_night_min": 125,
+  "price_night_max": 300,
+  "price_total_min": 1250,
+  "price_total_max": 1800,
   "currency": "USD",
   "nights": [
+   6,
+   10,
    7
   ],
   "medicines": [
-   "Yagé (Ayahuasca and Chacruna)",
+   "Yagé (Ayahuasca/Chacruna)",
    "Ambil (tobacco paste)",
    "Mambe (coca leaf and Yarumo ash)",
-   "Rapé (tobacco and sacred tree barks)"
+   "Rapé (tobacco and sacred tree barks)",
+   "Yagé (Ayahuasca and Chacruna)"
   ],
   "services": [
+   "Spiritual Integration Coaching (post-ceremony)",
+   "Ancestral Massage therapy (additional cost)",
+   "Temezcal ceremony",
+   "Therapy with Aleja (at Territorio de Origen)",
+   "River tour",
+   "Nature excursions",
    "Spiritual Integration Coaching (post-retreat)",
    "River bathing",
    "Waterfall hike",
@@ -7673,27 +8645,40 @@
   ],
   "indigenous": "indigenous-healers-on-staff",
   "lineage": [
-   "vegetalismo/mestizo",
-   "Siona",
    "Cofan",
-   "Inga"
+   "Inga",
+   "Siona",
+   "vegetalismo/mestizo"
   ],
   "healer_names": [
+   "Taita Javier",
+   "Taita Jairo",
+   "Taita Universario",
+   "Abuela Vitelia",
+   "Taita Libardo",
+   "Taita Leonidas",
    "Danielle"
   ],
-  "healers_n": 1,
-  "dieta": null,
-  "screening": null,
+  "healers_n": 7,
+  "dieta": true,
+  "screening": false,
   "ssri_policy": false,
   "scholarships": null,
   "website": "https://origensagrada.com",
   "sources": [
-   "retreatguru"
+   "retreatguru",
+   "web_search"
   ],
   "source_urls": [
    "https://origensagrada.com",
    "https://origensagrada.com/",
-   "https://retreat.guru/centers/898-1/origen-sagrada"
+   "https://origensagrada.com/about-us",
+   "https://origensagrada.com/all-events",
+   "https://origensagrada.com/integration-coaching-2",
+   "https://origensagrada.com/product/ayahuasca-adventure-retreat-to-the-amazon-january-2026-2",
+   "https://origensagrada.com/product/farm-retreat-july",
+   "https://retreat.guru/centers/898-1/origen-sagrada",
+   "https://www.origensagrada.com/all-events"
   ],
   "review": {
    "source": "RetreatGuru",
@@ -7701,7 +8686,7 @@
    "count": 5,
    "url": "https://retreat.guru/centers/898-1/origen-sagrada"
   },
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "id": "ayaadvisors:rasa-healing-center",
@@ -8042,6 +9027,71 @@
   "confidence": "medium"
  },
  {
+  "id": "google_places:shenqipasto.com",
+  "name": "Shen Qi Pasto Medicina Alternativa",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.258219+00:00",
+  "last_checked": "2026-07-05T06:40:42.258219+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "medical"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": 1.2140275,
+  "lng": -77.2785096,
+  "geo_source": "nominatim:Pasto, Colombia",
+  "country": "Colombia",
+  "region": null,
+  "city": "Pasto",
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": 20.26,
+  "price_total_max": 46.32,
+  "currency": "COP",
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "Acupuntura",
+   "Moxibustión",
+   "Terapia neural",
+   "Homeopatía",
+   "Sueroterapia",
+   "Auriculoterapia",
+   "Ventosas",
+   "Electroacupuntura",
+   "Fitoterapia",
+   "Homeosiniatria",
+   "Nebulización",
+   "Conoterapia",
+   "Plasma Rico en Plaquetas"
+  ],
+  "languages": [
+   "Spanish"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [],
+  "healer_names": [
+   "Dra. Jennifer Hernandez Eraso"
+  ],
+  "healers_n": 1,
+  "dieta": null,
+  "screening": false,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://www.shenqipasto.com/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://www.shenqipasto.com/"
+  ],
+  "review": null,
+  "confidence": "medium"
+ },
+ {
   "id": "google_places:spalalma.com",
   "name": "Spal Alma",
   "status": "active",
@@ -8331,6 +9381,63 @@
   "confidence": "medium"
  },
  {
+  "id": "web_search:umiyac.org",
+  "name": "UMIYAC – Unión de Médicos Indígenas Yageceros de la Amazonia Colombiana",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.581241+00:00",
+  "last_checked": "2026-07-05T06:40:42.581241+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "religious",
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": 1.1466295,
+  "lng": -76.6482327,
+  "geo_source": "nominatim:Mocoa, Putumayo, Colombia",
+  "country": "Colombia",
+  "region": "Putumayo",
+  "city": "Mocoa",
+  "setting": "jungle",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [
+   "Yagé (ayahuasca)",
+   "other medicinal plants (stated generically in Code of Ethics)"
+  ],
+  "services": [],
+  "languages": [
+   "Spanish",
+   "English"
+  ],
+  "indigenous": "indigenous-led",
+  "lineage": [
+   "Yagé/Ayahuasca – Cofán, Inga, Siona, Coreguaje, Kamentsá indigenous traditions"
+  ],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://umiyac.org/",
+  "sources": [
+   "web_search"
+  ],
+  "source_urls": [
+   "https://umiyac.org/",
+   "https://umiyac.org/contacto",
+   "https://umiyac.org/mission/?lang=en"
+  ],
+  "review": null,
+  "confidence": "medium"
+ },
+ {
   "id": "retreatguru:1610",
   "name": "Wanay Community",
   "status": "active",
@@ -8438,6 +9545,107 @@
   ],
   "review": null,
   "confidence": "high"
+ },
+ {
+  "id": "google_places:yachaytravels.com",
+  "name": "Yachay Experiences",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.463478+00:00",
+  "last_checked": "2026-07-05T06:40:42.463478+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": 1.0306708,
+  "lng": -76.61691,
+  "geo_source": "nominatim:Villagarzón, Putumayo, Colombia",
+  "country": "Colombia",
+  "region": "Putumayo",
+  "city": "Villagarzón",
+  "setting": "jungle",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "nature hikes / caminatas",
+   "sacred sites visits",
+   "ancestral gastronomy / conscious eating",
+   "spiritual integration ceremonies",
+   "women's retreats (Caminos de Poder)",
+   "water-energy harmonization experience (Yaku)"
+  ],
+  "languages": [
+   "Spanish"
+  ],
+  "indigenous": "unclear",
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": false,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://www.yachaytravels.com/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://www.yachaytravels.com/"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
+  "id": "web_search:yagecolombia.com",
+  "name": "Yage Colombia",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.483062+00:00",
+  "last_checked": "2026-07-05T06:40:42.483062+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": 4.099917,
+  "lng": -72.9088133,
+  "geo_source": "nominatim:Colombia",
+  "country": "Colombia",
+  "region": null,
+  "city": null,
+  "setting": null,
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [],
+  "languages": [],
+  "indigenous": null,
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": null,
+  "scholarships": null,
+  "website": "https://www.yagecolombia.com/",
+  "sources": [
+   "web_search"
+  ],
+  "source_urls": [
+   "https://www.yagecolombia.com/"
+  ],
+  "review": null,
+  "confidence": "low"
  },
  {
   "id": "web_search:yageheals.com",
@@ -8598,7 +9806,8 @@
    7,
    8,
    10,
-   29
+   29,
+   9
   ],
   "medicines": [
    "Yoco",
@@ -8634,7 +9843,12 @@
    "word/music circles",
    "personalized consultation with Taitas by request",
    "reintegration/integration coaching sessions",
-   "purge and purification ceremonies"
+   "purge and purification ceremonies",
+   "Private room option",
+   "Personalized consultation with the Taitas by request",
+   "Integration coaching sessions (post-retreat)",
+   "Vision Quest ceremony (Andean Mountains, Antioquia)",
+   "Yawanawá Tribal Journey (Brazil)"
   ],
   "languages": [
    "English",
@@ -8645,7 +9859,9 @@
    "Cofán",
    "vegetalismo/indigenous Colombian (Yagé/Colombian Amazon tradition)",
    "authorized lineages of Colombia",
-   "indigenous/vegetalismo"
+   "indigenous/vegetalismo",
+   "Colombian Amazon indigenous lineages",
+   "vegetalismo/traditional Yagé"
   ],
   "healer_names": [
    "Taita Herminsul Lucitante",
@@ -8653,9 +9869,14 @@
    "Iyari García",
    "Claudia Lorena Orrego",
    "Angie Cristina García",
+   "Angie Cristina García",
+   "Taita Herminsul Lucitante",
+   "Taita Leónidas Lezama",
+   "Iyari García",
+   "Claudia Lorena Orrego",
    "Angie Cristina García"
   ],
-  "healers_n": 6,
+  "healers_n": 11,
   "dieta": true,
   "screening": null,
   "ssri_policy": false,
@@ -8663,7 +9884,8 @@
   "website": "https://www.ziruyai.com",
   "sources": [
    "ayaadvisors",
-   "thirdwave"
+   "thirdwave",
+   "web_search"
   ],
   "source_urls": [
    "https://www.ziruyai.com/",
@@ -16819,6 +18041,69 @@
   "confidence": "medium"
  },
  {
+  "id": "web_search:cuyabenodolphinlodge.com",
+  "name": "Cuyabeno Dolphin Lodge",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.307068+00:00",
+  "last_checked": "2026-07-05T06:40:42.307068+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "other"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": null,
+  "lng": null,
+  "geo_source": null,
+  "country": "Ecuador",
+  "region": "Cuyabeno Wildlife Reserve",
+  "city": "Quito",
+  "setting": "jungle",
+  "price_night_min": 70,
+  "price_night_max": 210,
+  "price_total_min": 280,
+  "price_total_max": 420,
+  "currency": "USD",
+  "nights": [
+   2,
+   3,
+   4
+  ],
+  "medicines": [
+   "ayahuasca"
+  ],
+  "services": [
+   "community day visit",
+   "wildlife excursions"
+  ],
+  "languages": [
+   "English",
+   "Spanish"
+  ],
+  "indigenous": "unclear",
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://cuyabenodolphinlodge.com/",
+  "sources": [
+   "web_search"
+  ],
+  "source_urls": [
+   "https://cuyabenodolphinlodge.com/"
+  ],
+  "review": {
+   "source": "Tripadvisor",
+   "rating": null,
+   "count": null,
+   "url": null
+  },
+  "confidence": "medium"
+ },
+ {
   "id": "retreatguru:866",
   "name": "Feather Crown Ayahuasca Retreat Center",
   "status": "active",
@@ -16853,7 +18138,9 @@
    "tobacco/rapé (tobacco work)",
    "plant purgatives",
    "piñon colorado (huiso pionis)",
-   "flower baths (aromatic plant baths)"
+   "flower baths (aromatic plant baths)",
+   "tobacco",
+   "rapé (implied via tobacco work)"
   ],
   "services": [
    "Floral/aromatic plant baths",
@@ -16870,27 +18157,41 @@
    "integration circles (guided, each morning)",
    "English-speaking translators",
    "private rooms",
-   "hot showers"
+   "hot showers",
+   "Aromatic/flower plant baths",
+   "Guided jungle walks (including night walk, 10-day)",
+   "Cultural activities: music, dance, body painting, traditional handicraft workshops",
+   "Private individual healing sessions with the shaman",
+   "Private vehicle transport from Quito/airport (extra fee)",
+   "Extra nights at the center",
+   "PDF guidebook preparation materials",
+   "Laundry service"
   ],
   "languages": [
    "English",
-   "Spanish"
+   "Spanish",
+   "Spanish (implied by translation services mentioned)"
   ],
   "indigenous": "indigenous-healers-on-staff",
   "lineage": [
    "Kichwa (yachak tradition)",
    "Shipibo-Conibo (onanya tradition)",
    "Kichwa",
-   "Shipibo-Conibo"
+   "Shipibo-Conibo",
+   "Shipibo-Conibo (onanya lineage)"
   ],
   "healer_names": [
    "Don Carlos Landazuri",
    "Maestro Sina (Emilio Ramirez)",
    "Maestro Sina's son",
    "Don Carlos",
-   "Maestro Sina"
+   "Maestro Sina",
+   "Don Carlos Landazuri",
+   "Maestro Sina (Emilio Ramirez)",
+   "Maestro Sina's son (unnamed)",
+   "Jan Rostlinka"
   ],
-  "healers_n": 5,
+  "healers_n": 9,
   "dieta": true,
   "screening": true,
   "ssri_policy": true,
@@ -16898,7 +18199,8 @@
   "website": "https://www.feathercrown.com",
   "sources": [
    "ayaadvisors",
-   "retreatguru"
+   "retreatguru",
+   "web_search"
   ],
   "source_urls": [
    "https://ayaadvisors.org/listing/feather-crown/",
@@ -17120,6 +18422,85 @@
    "rating": 4.9,
    "count": 338,
    "url": "https://ayaadvisors.org/listing/gaia-sagrada/"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "web_search:greenforestecolodge.com",
+  "name": "Green Forest Ecolodge",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.291286+00:00",
+  "last_checked": "2026-07-05T06:40:42.291286+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "other"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": -0.3339338,
+  "lng": -75.7278493,
+  "geo_source": "nominatim:Cuyabeno, Sucumbíos, Ecuador",
+  "country": "Ecuador",
+  "region": "Sucumbíos",
+  "city": "Cuyabeno",
+  "setting": "jungle",
+  "price_night_min": 65,
+  "price_night_max": 200,
+  "price_total_min": 260,
+  "price_total_max": 400,
+  "currency": "USD",
+  "nights": [
+   2,
+   3,
+   4
+  ],
+  "medicines": [],
+  "services": [
+   "Kayak",
+   "Birdwatching",
+   "Jungle trails",
+   "Hammocks",
+   "Artisanal chocolate",
+   "Fitness area",
+   "Lodge riverbank swimming",
+   "Play area",
+   "Wi-Fi zone",
+   "Wildlife tours",
+   "Bird tours",
+   "Visit to Siona community",
+   "Volunteer program",
+   "Restaurant"
+  ],
+  "languages": [
+   "English",
+   "French",
+   "Dutch",
+   "German",
+   "Spanish"
+  ],
+  "indigenous": "unclear",
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": false,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://www.greenforestecolodge.com/",
+  "sources": [
+   "web_search"
+  ],
+  "source_urls": [
+   "https://www.greenforestecolodge.com/",
+   "https://www.greenforestecolodge.com/book-cuyabeno-tours",
+   "https://www.greenforestecolodge.com/pages/contact",
+   "https://www.greenforestecolodge.com/pages/faqs-cuyabeno"
+  ],
+  "review": {
+   "source": "On-site rating",
+   "rating": 4.9,
+   "count": null,
+   "url": "https://www.greenforestecolodge.com/"
   },
   "confidence": "medium"
  },
@@ -17377,6 +18758,65 @@
    "url": "https://retreat.guru/centers/757-1/hayulima-spiritual-sanctuary"
   },
   "confidence": "medium"
+ },
+ {
+  "id": "web_search:heartsongway.com",
+  "name": "Heartsong Way – Ecuador Healing Trips",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:41.617912+00:00",
+  "last_checked": "2026-07-05T06:40:41.617912+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness"
+  ],
+  "is_practitioner": true,
+  "facilitates_ayahuasca": false,
+  "lat": -1.3397668,
+  "lng": -79.3666965,
+  "geo_source": "nominatim:Ecuador",
+  "country": "Ecuador",
+  "region": null,
+  "city": null,
+  "setting": "unclear",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": "USD",
+  "nights": [],
+  "medicines": [
+   "master plant medicine"
+  ],
+  "services": [
+   "Life Purpose Hand Analysis",
+   "La Limpia shamanic healing",
+   "drum making",
+   "sound healing",
+   "shamanic healing circles",
+   "transformational workshops"
+  ],
+  "languages": [],
+  "indigenous": "trained-in-lineage-non-indigenous",
+  "lineage": [
+   "Yachak (Kichwa/Ecuador)"
+  ],
+  "healer_names": [
+   "Michael 'Heartsong' Cutter"
+  ],
+  "healers_n": 1,
+  "dieta": null,
+  "screening": false,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://www.heartsongway.com/",
+  "sources": [
+   "web_search"
+  ],
+  "source_urls": [
+   "https://www.heartsongway.com/"
+  ],
+  "review": null,
+  "confidence": "low"
  },
  {
   "id": "retreatguru:11197",
@@ -17694,7 +19134,8 @@
   ],
   "medicines": [
    "San Pedro / Huachuma",
-   "Temazcal"
+   "Temazcal",
+   "San Pedro (Huachuma)"
   ],
   "services": [
    "Sobada therapeutic massage session ($350 / $200 for retreat participants)",
@@ -17712,7 +19153,15 @@
    "Ancestor Healing / Despacho",
    "Oracle Reading",
    "Relationship Session",
-   "Concierge Services"
+   "Concierge Services",
+   "Sobada (therapeutic massage, 60–90 min, $350 / $200 for retreat participants)",
+   "Sacred Spot Tantric Session (60–90 min, $350 / $200 for retreat participants)",
+   "Goddess Touch Healing / Yoni massage (90 min, $350 / $200 for retreat participants)",
+   "Ancestor Healing / Despacho ceremony (60 min, $150 / $100 for retreat participants)",
+   "Oracle Reading (30 or 60 min, $60–$120 / $50–$100 for retreat participants)",
+   "Relationship Session (60 min, $150 / $100 for retreat participants)",
+   "Concierge Services including lodging/transport reservations and excursions ($75)",
+   "Integration Coaching (post-ceremony integration sessions)"
   ],
   "languages": [
    "English",
@@ -17726,9 +19175,10 @@
   "healer_names": [
    "Jhoselyn Gaddy",
    "Courtney Gaddy",
+   "Jhoselyn Gaddy",
    "Jhoselyn Gaddy"
   ],
-  "healers_n": 3,
+  "healers_n": 4,
   "dieta": null,
   "screening": true,
   "ssri_policy": false,
@@ -17736,15 +19186,18 @@
   "website": "https://www.ayahuascainecuador.com",
   "sources": [
    "ayaadvisors",
-   "thirdwave"
+   "thirdwave",
+   "web_search"
   ],
   "source_urls": [
    "https://ayaadvisors.org/listing/la-vida-divine/",
    "https://ayahuascainecuador.com/covid-safety",
    "https://www.ayahuascainecuador.com/",
    "https://www.ayahuascainecuador.com/about",
+   "https://www.ayahuascainecuador.com/about-1",
    "https://www.ayahuascainecuador.com/contact",
-   "https://www.ayahuascainecuador.com/retreats"
+   "https://www.ayahuascainecuador.com/retreats",
+   "https://www.ayahuascainecuador.com/retreats-1"
   ],
   "review": {
    "source": "AyaAdvisors",
@@ -23827,6 +25280,70 @@
   "confidence": "medium"
  },
  {
+  "id": "google_places:cuamguadalajara.org",
+  "name": "Centro Universitario de Alternativas Médicas (CUAM) – Diplomado en Programación Neurolingüística",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:41.385089+00:00",
+  "last_checked": "2026-07-05T06:40:41.385089+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "other"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": 20.6720375,
+  "lng": -103.338396,
+  "geo_source": "nominatim:Guadalajara, Jalisco, Mexico",
+  "country": "Mexico",
+  "region": "Jalisco",
+  "city": "Guadalajara",
+  "setting": "urban-adjacent",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": 68.65,
+  "price_total_max": 789.49,
+  "currency": "MXN",
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "Biodescodificación",
+   "Sanación Quántica Dimensional",
+   "Medicina Tradicional China",
+   "Biomagnetismo Médico Integral",
+   "Fitoterapia Clínica",
+   "Magnetoterapia",
+   "Auriculoterapia",
+   "Iridología",
+   "Flores de Bach",
+   "Reflexología",
+   "Numerología Sanadora",
+   "Masaje",
+   "Aromaterapia"
+  ],
+  "languages": [
+   "Spanish"
+  ],
+  "indigenous": "no-stated-affiliation",
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": false,
+  "screening": false,
+  "ssri_policy": false,
+  "scholarships": false,
+  "website": "http://www.cuamguadalajara.org/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://www.cuamguadalajara.org/",
+   "https://www.cuamguadalajara.org/contactanos",
+   "https://www.cuamguadalajara.org/programacion-neurolinguistica"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
   "id": "web_search:chakranapv.com",
   "name": "Chakrana",
   "status": "active",
@@ -24710,6 +26227,67 @@
    "url": "https://thethirdwave.co/directory/retreats/ayahuasca/baja-california/house-of-dreams/"
   },
   "confidence": "medium"
+ },
+ {
+  "id": "google_places:imtaampac.com",
+  "name": "IMTAAMPAC (Instituto de Medicinas Tradicionales Aplicadas y Artesanías México-Perú)",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.672346+00:00",
+  "last_checked": "2026-07-05T06:40:42.672346+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "medical"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": 23.6585116,
+  "lng": -102.0077097,
+  "geo_source": "nominatim:Mexico",
+  "country": "Mexico",
+  "region": null,
+  "city": null,
+  "setting": null,
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "talleres de medicina tradicional",
+   "ceremonias chamánicas",
+   "terapias naturales",
+   "exposiciones culturales",
+   "temazcal",
+   "herbolaria",
+   "técnicas de sanación tradicionales",
+   "conferencias"
+  ],
+  "languages": [
+   "Spanish"
+  ],
+  "indigenous": "unclear",
+  "lineage": [],
+  "healer_names": [
+   "Lauro Hinostroza García",
+   "Jaime Flores"
+  ],
+  "healers_n": 2,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://imtaampac.com/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://imtaampac.com/"
+  ],
+  "review": null,
+  "confidence": "low"
  },
  {
   "id": "retreatguru:9668",
@@ -27424,6 +29002,84 @@
   "confidence": "medium"
  },
  {
+  "id": "google_places:temazcallunaazul.com",
+  "name": "Temazcal Luna Azul",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:41.594723+00:00",
+  "last_checked": "2026-07-05T06:40:41.594723+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": 25.542698,
+  "lng": -103.410512,
+  "geo_source": "nominatim:Torreon, Coahuila, Mexico",
+  "country": "Mexico",
+  "region": "Coahuila",
+  "city": "Torreon",
+  "setting": "other",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": 20.02,
+  "price_total_max": 85.81,
+  "currency": "MXN",
+  "nights": [],
+  "medicines": [
+   "nanacates (psilocybin mushrooms)",
+   "cacao",
+   "música medicina"
+  ],
+  "services": [
+   "Temazcal",
+   "Saunazcal (private session for 2)",
+   "Therapeutic Massage",
+   "Deep Tissue Massage",
+   "Aura cleansing and restoration (magnets)",
+   "Chakra alignment with magnets",
+   "Masaje Terapeutico-Emocional",
+   "Terapia Psicológica (holistic psychological therapy)",
+   "Space rental"
+  ],
+  "languages": [
+   "Spanish",
+   "English"
+  ],
+  "indigenous": "unclear",
+  "lineage": [],
+  "healer_names": [
+   "Blanca Lucero De Luna",
+   "Alfonso Orona",
+   "Mariel Chavez",
+   "Mar Cruz",
+   "Sagrario Orona",
+   "Lucia Sosa"
+  ],
+  "healers_n": 6,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://www.temazcallunaazul.com",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://www.temazcallunaazul.com/",
+   "https://www.temazcallunaazul.com/about-us",
+   "https://www.temazcallunaazul.com/book-online",
+   "https://www.temazcallunaazul.com/booking-calendar/aura-cleansing-and-restoration-magnets",
+   "https://www.temazcallunaazul.com/booking-calendar/deep-tissue-massage",
+   "https://www.temazcallunaazul.com/booking-calendar/saunazcal-private-session-for-2",
+   "https://www.temazcallunaazul.com/booking-calendar/temazcal",
+   "https://www.temazcallunaazul.com/booking-calendar/therapeutic-massage",
+   "https://www.temazcallunaazul.com/event-details-registration/ceremonia-con-nanacates-6"
+  ],
+  "review": null,
+  "confidence": "medium"
+ },
+ {
   "id": "google_places:greenmaya.mx",
   "name": "The Green Maya Project",
   "status": "active",
@@ -28120,6 +29776,182 @@
   ],
   "review": null,
   "confidence": "high"
+ },
+ {
+  "id": "web_search:ecstaticmysticism.com",
+  "name": "Ecstatic Mysticism",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:41.778389+00:00",
+  "last_checked": "2026-07-05T06:40:41.778389+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "medical"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": null,
+  "lng": null,
+  "geo_source": null,
+  "country": "Multiple (Mexico, Ecuador, Gabon, Brazil — multi-country program)",
+  "region": null,
+  "city": null,
+  "setting": "jungle",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [
+   11,
+   20
+  ],
+  "medicines": [
+   "ayahuasca / yagé",
+   "peyote",
+   "iboga",
+   "ibogaine",
+   "psilocybin mushrooms",
+   "LSD",
+   "MDMA",
+   "ketamine",
+   "power plants (darkness intensive)",
+   "DMT",
+   "5-MeO-DMT"
+  ],
+  "services": [
+   "gestalt psychotherapy",
+   "breathwork",
+   "family constellations",
+   "bodywork",
+   "meditation",
+   "death and grief work",
+   "sexuality and eroticism workshops",
+   "transpersonal psychology",
+   "systems theory",
+   "dreamwork",
+   "core shamanism",
+   "spontaneous movement",
+   "psychedelic-assisted self-inquiry",
+   "online immersions",
+   "pilgrimages to indigenous territories",
+   "darkness retreat",
+   "supervision tracks"
+  ],
+  "languages": [],
+  "indigenous": "indigenous-healers-on-staff",
+  "lineage": [
+   "Nahua",
+   "Wixaritari",
+   "A'i-Cofan",
+   "Mitsogo",
+   "Babongo",
+   "Massango",
+   "Lakota",
+   "Bwiti",
+   "Vajrayana",
+   "Radical Dzogchen",
+   "Kashmiri Shaivism",
+   "Humanistic psychology",
+   "Gestalt psychology",
+   "Transpersonal psychology",
+   "vegetalismo/mestizo",
+   "neo-shamanic"
+  ],
+  "healer_names": [
+   "Tntn Lucitante",
+   "Taita David Queta",
+   "Kylea Taylor",
+   "Tsering Wangmo Khymsar",
+   "Anja Loizaga-Velder",
+   "Jocelyn Huerta (Joss)",
+   "Renee Jenkinson",
+   "Alejandra Soto",
+   "Rena",
+   "Koundi Asiriani",
+   "Helen Loshny",
+   "Jonathan Dickinson",
+   "Ramiro Peralta",
+   "Mosouma Matani",
+   "Jorge Ferrer",
+   "Tsikiri Miguel",
+   "Otakame Rogelio",
+   "Mama Mbamba",
+   "Citaima Amelia",
+   "Skye & Miraz",
+   "Ted Esser",
+   "Moussavu",
+   "Phil Borges",
+   "Ariel Vegosen",
+   "Kate Joyner",
+   "Doña Domitila",
+   "Niyati Evers",
+   "Nongo Kunadembe",
+   "Mayoss Mukumbu",
+   "Dr Natalie Tobert",
+   "Javier Charme",
+   "Svagito Liebermeister",
+   "Atiambi-ai",
+   "Khumba Manengo",
+   "Benjamin Malcolm",
+   "Muguasi Asevani",
+   "Mbana Pierre",
+   "Genesee Herzberg",
+   "Yaqui A. Martinez",
+   "Papa Kombe",
+   "Susana Bustos",
+   "Tenzin Wangyal Rinpoche",
+   "Beatriz H. Vega",
+   "Umberto Pannacci",
+   "Theci Leo",
+   "Haimuwei Carrillo",
+   "Nkogue Adimikoa",
+   "Doug Van Houten",
+   "Michela Gecele",
+   "Taita Albertino",
+   "Joel Olive",
+   "Mukeku Magi",
+   "Rachel Kolar",
+   "Matsanzi Mabe",
+   "Justin Natoli",
+   "Sevananga Mitsono",
+   "Don Victor Chura Quispe",
+   "Kountino Jean Pierre",
+   "Dr. Sunil Kumar Aggarwal",
+   "Asigareke",
+   "Dakini Kali",
+   "Kahansi",
+   "Didio Peña",
+   "Mabendent",
+   "Dr Steve Vinay Gunther",
+   "Dr. Antoni Aguilar Chastellain",
+   "Brian Stafford",
+   "Lila Lieberman",
+   "Antonio C. Gurgel do Amaral Jr",
+   "Osiris García",
+   "Stacy Gallagher",
+   "Dr. Pamela Kryskow",
+   "KamalaDevi McClure",
+   "Gisele M. B. Gurgel do Amaral",
+   "Ismail Lourido Ali",
+   "Alexander Laszlo"
+  ],
+  "healers_n": 76,
+  "dieta": null,
+  "screening": true,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://www.ecstaticmysticism.com/",
+  "sources": [
+   "web_search"
+  ],
+  "source_urls": [
+   "https://www.ecstaticmysticism.com/",
+   "https://www.ecstaticmysticism.com/faculty",
+   "https://www.ecstaticmysticism.com/program"
+  ],
+  "review": null,
+  "confidence": "medium"
  },
  {
   "id": "retreatguru:6310",
@@ -33773,6 +35605,10 @@
    "Mapacho (tobacco)",
    "Agua florida",
    "Cacao",
+   "cacao",
+   "tobacco/mapacho",
+   "rapé (not explicitly stated)",
+   "Chullachaqui",
    "rapé/tobacco (mapacho implied via smoke baths)",
    "sangre de grado",
    "bobinsana",
@@ -33811,6 +35647,18 @@
    "Counseling/integration sessions via AyaHelp.com",
    "Jungle hiking",
    "River swimming",
+   "vapor baths",
+   "plant baths",
+   "smoke baths",
+   "purgatives",
+   "inhalants",
+   "poultices",
+   "pre-program counseling session with AyaHelp.com",
+   "integration counseling session with AyaHelp.com",
+   "jungle hiking",
+   "airport pickup",
+   "hotel accommodation in Iquitos (2 nights)",
+   "USB of retreat photos and ceremony recordings",
    "breathwork",
    "sound healing",
    "epigenetics",
@@ -33818,7 +35666,6 @@
    "hypnosis",
    "channeling",
    "vapor/steam baths",
-   "plant baths",
    "swimming",
    "hiking",
    "fishing",
@@ -33841,11 +35688,13 @@
    "Don Ronor",
    "Doña Angela",
    "Don Ronor",
+   "Don Ronor",
+   "Doña Angela",
    "Don Enrique (Lopez)",
    "Doña Angela (Lopez)",
    "Don Ronor / Don Rono (Lopez)"
   ],
-  "healers_n": 6,
+  "healers_n": 8,
   "dieta": true,
   "screening": true,
   "ssri_policy": true,
@@ -33854,7 +35703,8 @@
   "sources": [
    "ayaadvisors",
    "retreatguru",
-   "thirdwave"
+   "thirdwave",
+   "web_search"
   ],
   "source_urls": [
    "https://ayaadvisors.org/listing/ayahuasca-foundation/",
@@ -35812,6 +37662,68 @@
   "confidence": "medium"
  },
  {
+  "id": "google_places:centrohampichicuy.com",
+  "name": "Centro Hampichicuy",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.356235+00:00",
+  "last_checked": "2026-07-05T06:40:42.356235+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": -6.4877198,
+  "lng": -76.3598708,
+  "geo_source": "nominatim:Tarapoto, San Martín, Peru",
+  "country": "Peru",
+  "region": "San Martín",
+  "city": "Tarapoto",
+  "setting": "mountain",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "Seminarios-Dietas con Plantas Medicinales Maestras",
+   "Talleres de AutoExploración con Plantas Medicinales",
+   "Baños de Florecimiento (Floral Baths)",
+   "Sauna Artesanal",
+   "Terapias Complementarias",
+   "Habitaciones y Bungalows con vista a piscina, Laguna Artificial o Cordillera Escalera"
+  ],
+  "languages": [
+   "Spanish",
+   "English"
+  ],
+  "indigenous": "unclear",
+  "lineage": [
+   "Amazonian traditional medicine",
+   "vegetalismo/mestizo"
+  ],
+  "healer_names": [
+   "Javier Zavala"
+  ],
+  "healers_n": 1,
+  "dieta": true,
+  "screening": false,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://centrohampichicuy.com/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://centrohampichicuy.com",
+   "https://centrohampichicuy.com/"
+  ],
+  "review": null,
+  "confidence": "medium"
+ },
+ {
   "id": "google_places:centroholisticodespertar.com",
   "name": "Centro Holístico Despertar",
   "status": "active",
@@ -36137,6 +38049,90 @@
    "url": "https://ayaadvisors.org/listing/chimicuas-house/"
   },
   "confidence": "low"
+ },
+ {
+  "id": "web_search:ecologiaperumanu.com",
+  "name": "Chontachaka Ecological Reserve",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.502921+00:00",
+  "last_checked": "2026-07-05T06:40:42.502921+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": null,
+  "lng": null,
+  "geo_source": null,
+  "country": "Peru",
+  "region": "Cusco / Madre de Dios",
+  "city": "Cusco",
+  "setting": "jungle",
+  "price_night_min": 15,
+  "price_night_max": 290,
+  "price_total_min": 205.33,
+  "price_total_max": 2030.52,
+  "currency": "EUR",
+  "nights": [
+   7,
+   9,
+   14
+  ],
+  "medicines": [
+   "Wachuma (San Pedro) - optional",
+   "Bamboo diet plant",
+   "TOE (mentioned in healer background)",
+   "rapé not stated",
+   "tobacco not stated"
+  ],
+  "services": [
+   "Yoga and meditation sessions",
+   "Art therapy",
+   "Forest bathing (Amazon forest bath)",
+   "Mud and water baths",
+   "Natural sauna",
+   "Massage (one included; extras at additional cost)",
+   "Magnet therapy",
+   "Excursions (waterfalls, hot springs, river boat trip)",
+   "Ecotourism journeys",
+   "Volunteering"
+  ],
+  "languages": [
+   "English",
+   "Spanish"
+  ],
+  "indigenous": "indigenous-healers-on-staff",
+  "lineage": [
+   "Harakbut / Huachiperi",
+   "vegetalismo/mestizo",
+   "multi-tradition"
+  ],
+  "healer_names": [
+   "Magdalena Ruíz",
+   "Alberto Manqueriapa Vitente",
+   "Ignacio Cano (Nak)"
+  ],
+  "healers_n": 3,
+  "dieta": true,
+  "screening": true,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "https://ecologiaperumanu.com",
+  "sources": [
+   "web_search"
+  ],
+  "source_urls": [
+   "https://ecologiaperumanu.com/",
+   "https://ecologiaperumanu.com/en-ayahuasca-retreat-in-peruvian-amazon-t",
+   "https://ecologiaperumanu.com/en-contact-p",
+   "https://ecologiaperumanu.com/en-philosophy-p",
+   "https://ecologiaperumanu.com/en-the-master-healers-p",
+   "https://ecologiaperumanu.com/en-therapeutic-detox-retreat-in-the-peruvian-amazon-t",
+   "https://ecologiaperumanu.com/en-who-we-are-1-p"
+  ],
+  "review": null,
+  "confidence": "high"
  },
  {
   "id": "ayaadvisors:chrysalis-ayahuasca",
@@ -38106,7 +40102,7 @@
   "confidence": "medium"
  },
  {
-  "id": "retreatguru:10322",
+  "id": "google_places:incashipiba.com",
   "name": "Inca Shipiba Healing Center",
   "status": "active",
   "date_added": "2026-07-03T03:34:25.453083+00:00",
@@ -38117,17 +40113,17 @@
   ],
   "is_practitioner": false,
   "facilitates_ayahuasca": true,
-  "lat": -4.5070455,
-  "lng": -73.5740018,
-  "geo_source": "nominatim:Nauta, Loreto, Peru",
+  "lat": -4.4925133,
+  "lng": -73.6014446,
+  "geo_source": "nominatim:Nauta / Iquitos, Loreto, Peru",
   "country": "Peru",
   "region": "Loreto",
-  "city": "Nauta",
+  "city": "Nauta / Iquitos",
   "setting": "jungle",
-  "price_night_min": 28,
-  "price_night_max": 643,
-  "price_total_min": 1250,
-  "price_total_max": 4500,
+  "price_night_min": 32,
+  "price_night_max": 500,
+  "price_total_min": 1300,
+  "price_total_max": 3500,
   "currency": "USD",
   "nights": [
    7,
@@ -38135,10 +40131,23 @@
    14,
    20,
    30,
+   40,
    45
   ],
-  "medicines": [],
+  "medicines": [
+   "kambo (frog medicine)",
+   "tobacco/mapacho (tobacco purge)",
+   "rapé (not explicitly stated)",
+   "vapor sauna with medicinal plants"
+  ],
   "services": [
+   "Kambo session with Wilson ($80 USD)",
+   "Vapor sauna with Matilde ($60 USD)",
+   "Energetic massage with Matilde or Sara ($60 USD)",
+   "Shipibo handicraft market",
+   "Sound healing / music sharing post-ceremony",
+   "Floral/plant baths",
+   "Integration sessions",
    "medicinal massages",
    "plant vapor saunas",
    "womb massages",
@@ -38150,8 +40159,10 @@
    "Starlink internet"
   ],
   "languages": [
-   "English",
    "Spanish",
+   "English",
+   "Italian",
+   "Portuguese",
    "Polish"
   ],
   "indigenous": "indigenous-led",
@@ -38159,21 +40170,32 @@
    "Shipibo-Conibo"
   ],
   "healer_names": [
+   "Matilde Gomez (Korin Beka)",
+   "Wilson (Chonon Meni)",
+   "Sara (Xetan Beka)",
+   "Sri Nhat",
+   "Gracia Maria (Sankenkate)",
    "Matilde (Korin Beka)",
    "Sara (Xetan Beka)",
    "Wilson (Chonon Meni)"
   ],
-  "healers_n": 3,
+  "healers_n": 8,
   "dieta": true,
-  "screening": false,
-  "ssri_policy": false,
+  "screening": true,
+  "ssri_policy": true,
   "scholarships": null,
-  "website": "https://incashipiba.com/",
+  "website": "https://incashipiba.com",
   "sources": [
+   "google_places",
    "retreatguru"
   ],
   "source_urls": [
    "https://incashipiba.com/",
+   "https://incashipiba.com/about-us",
+   "https://incashipiba.com/ayahuasca-about",
+   "https://incashipiba.com/book-now",
+   "https://incashipiba.com/master-plants",
+   "https://incashipiba.com/preparationintegration",
    "https://retreat.guru/centers/10322-1/inca-shipiba-ayahuasca"
   ],
   "review": {
@@ -38182,7 +40204,7 @@
    "count": 1,
    "url": "https://retreat.guru/centers/10322-1/inca-shipiba-ayahuasca"
   },
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "id": "web_search:incagoexpeditions.com",
@@ -41133,21 +43155,28 @@
   "region": "Loreto (Maynas)",
   "city": "Iquitos",
   "setting": "jungle",
-  "price_night_min": null,
-  "price_night_max": null,
-  "price_total_min": null,
-  "price_total_max": null,
-  "currency": null,
+  "price_night_min": 27,
+  "price_night_max": 1071,
+  "price_total_min": 1600,
+  "price_total_max": 7500,
+  "currency": "USD",
   "nights": [
    7,
    14,
    28,
    90,
-   365
+   365,
+   11,
+   21,
+   30,
+   42,
+   60
   ],
   "medicines": [
    "master plant medicines",
-   "Chiric Sanango"
+   "Chiric Sanango",
+   "master plants (Shihuahuaco, Marosa, Ojé mentioned)",
+   "purgative (vomitivo)"
   ],
   "services": [
    "master plant diets",
@@ -41160,28 +43189,51 @@
    "botanical garden",
    "communal lounge and dining room",
    "isolation tambos for long-term dieters/apprentices",
-   "School of Ancestral Knowledge (year-long training)"
+   "School of Ancestral Knowledge (year-long training)",
+   "Flower baths (twice weekly)",
+   "Massage (optional)",
+   "Group meditation",
+   "Sharing circles",
+   "Integration conversations",
+   "Shamanic apprenticeship (1-year)",
+   "School of Ancestral Knowledge (12-month program)",
+   "Work-trade facilitator/translator program",
+   "Airport/hotel pickup from Iquitos"
   ],
-  "languages": [],
+  "languages": [
+   "English",
+   "Spanish"
+  ],
   "indigenous": "indigenous-led",
   "lineage": [
    "Shipibo-Conibo"
   ],
   "healer_names": [
-   "Ricardo Amaringo"
+   "Ricardo Amaringo",
+   "Ricardo Amaringo",
+   "Miguel Muñoz",
+   "Filacio Muñoz",
+   "Oscar Vasquez"
   ],
-  "healers_n": 1,
+  "healers_n": 5,
   "dieta": true,
   "screening": null,
   "ssri_policy": false,
-  "scholarships": null,
+  "scholarships": true,
   "website": "https://nihuerao.com/",
   "sources": [
-   "ayaadvisors"
+   "ayaadvisors",
+   "web_search"
   ],
   "source_urls": [
    "https://ayaadvisors.org/listing/nihue-rao-centro-espiritual/",
-   "https://nihuerao.com/"
+   "https://nihuerao.com/",
+   "https://nihuerao.com/ayahuasca-retreats",
+   "https://nihuerao.com/book-retreat",
+   "https://nihuerao.com/introduction-to-ancestral-plant-medicine",
+   "https://nihuerao.com/making-the-most-of-an-ayahuasca-ceremony",
+   "https://nihuerao.com/our-team",
+   "https://nihuerao.com/school-of-ancestral-knowledge"
   ],
   "review": {
    "source": "AyaAdvisors",
@@ -43972,6 +46024,66 @@
   "confidence": "low"
  },
  {
+  "id": "google_places:sachaqente.com",
+  "name": "Sacha Q'ente",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.451112+00:00",
+  "last_checked": "2026-07-05T06:40:42.451112+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "medical"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": -13.2000945,
+  "lng": -71.5539961,
+  "geo_source": "nominatim:Paucartambo, Cusco, Peru",
+  "country": "Peru",
+  "region": "Cusco",
+  "city": "Paucartambo",
+  "setting": "jungle",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [
+   "Ceremonias (MTAAZ)",
+   "Tratamiento de adicciones (desintoxicación y sanación especializado y personalizado)",
+   "Terapia psicológica / psicoanalítica",
+   "Consultas",
+   "Terapeutas (integrating traditional medicine into wellness processes)"
+  ],
+  "languages": [
+   "Spanish"
+  ],
+  "indigenous": "unclear",
+  "lineage": [
+   "Medicina Tradicional Andina Amazónica (MTAAZ)",
+   "Andino-Amazónica"
+  ],
+  "healer_names": [
+   "Pio Vucetich Nuñez del Prado"
+  ],
+  "healers_n": 1,
+  "dieta": true,
+  "screening": null,
+  "ssri_policy": false,
+  "scholarships": null,
+  "website": "http://sachaqente.com/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "http://sachaqente.com/"
+  ],
+  "review": null,
+  "confidence": "medium"
+ },
+ {
   "id": "psychedelic_support:vanessa-bright-lp",
   "name": "Sacred Dream Alchemy – \"Roots to the Soul\" Plant Medicine Retreat",
   "status": "active",
@@ -45372,6 +47484,74 @@
   ],
   "review": null,
   "confidence": "high"
+ },
+ {
+  "id": "google_places:shipiborao.com",
+  "name": "Shipibo Rao",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:41.353945+00:00",
+  "last_checked": "2026-07-05T06:40:41.353945+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "wellness",
+   "religious"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": true,
+  "lat": null,
+  "lng": null,
+  "geo_source": null,
+  "country": "Peru",
+  "region": "Peruvian Amazon",
+  "city": null,
+  "setting": "jungle",
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [
+   14,
+   30,
+   60,
+   90,
+   120,
+   365
+  ],
+  "medicines": [],
+  "services": [
+   "flower baths",
+   "steam baths",
+   "vomitive tea",
+   "plant treatments",
+   "individual consultations",
+   "distance/surrogate healing",
+   "apprenticeship dieta",
+   "integration support",
+   "post-dieta follow-up"
+  ],
+  "languages": [],
+  "indigenous": "indigenous-led",
+  "lineage": [
+   "Shipibo-Conibo"
+  ],
+  "healer_names": [
+   "Maestro José Lopez Sanchez"
+  ],
+  "healers_n": 1,
+  "dieta": true,
+  "screening": true,
+  "ssri_policy": true,
+  "scholarships": null,
+  "website": "https://shipiborao.com/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://shipiborao.com/"
+  ],
+  "review": null,
+  "confidence": "medium"
  },
  {
   "id": "retreatguru:391",
@@ -65090,6 +67270,52 @@
   "source_urls": [
    "https://nossairmandade.com/",
    "https://nossairmandade.com/contact"
+  ],
+  "review": null,
+  "confidence": "low"
+ },
+ {
+  "id": "google_places:ojodeluna.org",
+  "name": "Ojo de Luna",
+  "status": "active",
+  "date_added": "2026-07-05T06:40:42.331188+00:00",
+  "last_checked": "2026-07-05T06:40:42.331188+00:00",
+  "date_status_changed": null,
+  "org_type": [
+   "other"
+  ],
+  "is_practitioner": false,
+  "facilitates_ayahuasca": false,
+  "lat": null,
+  "lng": null,
+  "geo_source": null,
+  "country": null,
+  "region": null,
+  "city": null,
+  "setting": null,
+  "price_night_min": null,
+  "price_night_max": null,
+  "price_total_min": null,
+  "price_total_max": null,
+  "currency": null,
+  "nights": [],
+  "medicines": [],
+  "services": [],
+  "languages": [],
+  "indigenous": null,
+  "lineage": [],
+  "healer_names": [],
+  "healers_n": 0,
+  "dieta": null,
+  "screening": null,
+  "ssri_policy": null,
+  "scholarships": null,
+  "website": "https://www.ojodeluna.org/",
+  "sources": [
+   "google_places"
+  ],
+  "source_urls": [
+   "https://www.ojodeluna.org/"
   ],
   "review": null,
   "confidence": "low"
