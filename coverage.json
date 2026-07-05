@@ -1,8 +1,8 @@
 {
- "discovered": 743,
- "crawled": 743,
- "with_official_site": 546,
- "sites_via_gapfill": 333,
- "extracted": 723,
- "mapped": 533
+ "discovered": 1096,
+ "crawled": 1096,
+ "with_official_site": 870,
+ "sites_via_gapfill": 339,
+ "extracted": 1041,
+ "mapped": 742
 }
