@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Ayahuasca Retreat Atlas</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="topbar">
+    <div class="brand">
+      <span class="mark"></span>
+      <h1>Ayahuasca Retreat Atlas</h1>
+    </div>
+    <div id="view-toggle">
+      <button data-view="map" class="active" type="button">Map</button>
+      <button data-view="table" type="button">Table</button>
+    </div>
+    <div class="meta">
+      <span id="count">–</span> centers ·
+      <span id="geocount">–</span> mapped
+      <span class="asof" id="asof"></span>
+    </div>
+  </header>
+
+  <div id="layout">
+    <aside id="sidebar">
+      <div id="coverage"></div>
+
+      <div class="field">
+        <input type="search" id="search" placeholder="Search name, country, city…" autocomplete="off" />
+      </div>
+
+      <div class="field">
+        <label>Country</label>
+        <select id="country"><option value="">All countries</option></select>
+      </div>
+
+      <details open class="facet">
+        <summary>Indigenous affiliation <span class="hint">(as stated)</span></summary>
+        <div id="affiliation" class="checks"></div>
+      </details>
+
+      <details class="facet">
+        <summary>Organization type</summary>
+        <div id="orgtype" class="checks"></div>
+      </details>
+
+      <details class="facet">
+        <summary>Other plant medicines</summary>
+        <div id="medicines" class="checks"></div>
+      </details>
+
+      <details open class="facet">
+        <summary>Price / night (USD)</summary>
+        <div class="range">
+          <label>min <input type="number" id="priceMin" min="0" step="10" /></label>
+          <label>max <input type="number" id="priceMax" min="0" step="10" /></label>
+          <label class="cbx"><input type="checkbox" id="includeUnpriced" checked /> include unpriced</label>
+        </div>
+      </details>
+
+      <details class="facet">
+        <summary>Only show…</summary>
+        <div class="checks">
+          <label class="cbx"><input type="checkbox" id="hasSite" /> has official website</label>
+          <label class="cbx"><input type="checkbox" id="hasScholarship" /> scholarships / sliding scale</label>
+          <label class="cbx"><input type="checkbox" id="hasScreening" /> medical screening stated</label>
+          <label class="cbx"><input type="checkbox" id="hidePractitioners" checked /> hide individual practitioners</label>
+          <label class="cbx"><input type="checkbox" id="facilitatesOnly" checked /> facilitates ayahuasca only</label>
+          <label class="cbx"><input type="checkbox" id="includeClosed" checked /> include closed / defunct</label>
+        </div>
+      </details>
+
+      <button id="reset" type="button">Reset filters</button>
+
+      <div id="results"></div>
+    </aside>
+
+    <main id="map">
+      <div id="legend">
+        <div class="legend-title">Indigenous affiliation <span>(as stated)</span></div>
+        <div id="legend-items"></div>
+      </div>
+    </main>
+
+    <section id="table-view" hidden>
+      <table id="data-table">
+        <thead><tr id="table-head"></tr></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <div id="disclaimer">
+    Research dataset — fields are drawn from stated source text; claims (esp. indigenous
+    involvement, community benefit) are recorded as claims, not verified. Pricing carries an
+    as-of date and may be approximate.
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
