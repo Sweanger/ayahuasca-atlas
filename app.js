@@ -26,9 +26,12 @@
   const markerFor = {};
   DATA.forEach((r) => {
     if (r.lat == null || r.lng == null) return;
-    const m = L.circleMarker([r.lat, r.lng], {
-      radius: 7, weight: 1.5, color: "#fff", fillColor: affColor(r.indigenous), fillOpacity: 0.9,
-    });
+    const opts = r.maps_only
+      ? { radius: 5, weight: 1, color: "#8a8f98", dashArray: "2 2",
+          fillColor: "#c9ccd1", fillOpacity: 0.45 }
+      : { radius: 7, weight: 1.5, color: "#fff",
+          fillColor: affColor(r.indigenous), fillOpacity: 0.9 };
+    const m = L.circleMarker([r.lat, r.lng], opts);
     m.bindPopup(() => popupHTML(r), { maxWidth: 300 });
     r._marker = m;
     markerFor[r._i] = m;
@@ -44,6 +47,18 @@
   }
 
   function popupHTML(r) {
+    if (r.maps_only) {
+      const rv = r.review && r.review.rating != null
+        ? `<div class="row"><span class="k">Google:</span> ${r.review.rating} (${r.review.count ?? "?"})</div>` : "";
+      return `<div class="pop">
+        <h3>${esc(r.name)}</h3>
+        <div class="loc">${esc(r.address || r.country || "location approx.")}</div>
+        <div class="row"><span class="aff-badge" style="background:#8a8f98">Maps-only lead · unverified</span></div>
+        ${r.phone ? `<div class="row"><span class="k">Phone:</span> ${esc(r.phone)}</div>` : ""}
+        ${rv}
+        <div class="src">No website found — Google Maps pin only. Relevance &amp; ayahuasca facilitation NOT confirmed.</div>
+      </div>`;
+    }
     const loc = [r.city, r.region, r.country].filter(Boolean).join(", ");
     const rows = [];
     const p = priceStr(r);
@@ -127,6 +142,9 @@
       if (!hay.includes(q)) return false;
     }
     if (countrySel.value && r.country !== countrySel.value) return false;
+
+    // Maps-only leads: unverified, so gated solely by search + country + their toggle.
+    if (r.maps_only) return $("showLeads").checked;
 
     const affs = checked("aff");
     if (affs.length && !affs.includes(r.indigenous || "unclear")) return false;
@@ -303,6 +321,7 @@
         <div><b>${c.sites_via_gapfill}</b><span>found via search</span></div>
         <div><b>${c.extracted}</b><span>profiled</span></div>
       </div>
+      ${c.maps_only_leads ? `<div class="cov-note">+ ${c.maps_only_leads} website-less <b>Maps-only leads</b> (unverified) — toggle "show Maps-only leads" to view.</div>` : ""}
       ${inProgress ? `<div class="cov-note">Extraction runs after crawling — the map fills to all ${c.discovered} centers when it completes. Reload after a refresh.</div>` : ""}`;
   }
 
@@ -315,6 +334,12 @@
       row.innerHTML = `<span class="dot" style="background:${AFFIL[k].color}"></span>${AFFIL[k].label}`;
       box.appendChild(row);
     });
+    if (DATA.some(r => r.maps_only)) {
+      const row = document.createElement("div");
+      row.className = "legend-row";
+      row.innerHTML = `<span class="dot" style="background:#c9ccd1;border:1px dashed #8a8f98"></span>Maps-only lead (unverified)`;
+      box.appendChild(row);
+    }
   }
 
   renderCoverage();
