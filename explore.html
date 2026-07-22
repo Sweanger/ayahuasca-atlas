@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<title>Ayahuasca Atlas — Data Explorer</title>
+<style>
+  :root{
+    --paper:#F1F3ED; --raise:#FAFBF6; --card:#FFFFFF; --ink:#18211C; --ink-soft:#3A463E;
+    --muted:#68746B; --faint:#96A096; --line:#E0E3D8; --grid:#EBEDE4;
+    --accent:#2E6B4E; --accent-soft:#DDE9E0; --highlight:#B0791F;
+    --gF:#C1662E; --gM:#2B7FB0; --gND:#9AA29A;
+    --seq5:#1F4E38; --seq4:#2E6B4E; --seq3:#5E8F76; --seq2:#9DBBA8; --seq1:#CBD9CF;
+    --serif:'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;
+    --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --paper:#11170F; --raise:#191F15; --card:#1C2318; --ink:#E9ECE1; --ink-soft:#BEC6B8;
+    --muted:#8B978C; --faint:#69766B; --line:#2A3327; --grid:#232B20;
+    --accent:#63AE85; --accent-soft:#1E2C23; --highlight:#D6A24E;
+    --gF:#D98A52; --gM:#5AA6D0; --gND:#9AA29A;
+    --seq5:#8FC9A8; --seq4:#63AE85; --seq3:#4A8168; --seq2:#37503F; --seq1:#28352B;
+  }}
+  :root[data-theme="light"]{color-scheme:light;
+    --paper:#F1F3ED;--raise:#FAFBF6;--card:#FFFFFF;--ink:#18211C;--ink-soft:#3A463E;
+    --muted:#68746B;--faint:#96A096;--line:#E0E3D8;--grid:#EBEDE4;--accent:#2E6B4E;
+    --accent-soft:#DDE9E0;--highlight:#B0791F;--gF:#C1662E;--gM:#2B7FB0;--gND:#9AA29A;
+    --seq5:#1F4E38;--seq4:#2E6B4E;--seq3:#5E8F76;--seq2:#9DBBA8;--seq1:#CBD9CF;}
+  :root[data-theme="dark"]{color-scheme:dark;
+    --paper:#11170F;--raise:#191F15;--card:#1C2318;--ink:#E9ECE1;--ink-soft:#BEC6B8;
+    --muted:#8B978C;--faint:#69766B;--line:#2A3327;--grid:#232B20;--accent:#63AE85;
+    --accent-soft:#1E2C23;--highlight:#D6A24E;--gF:#D98A52;--gM:#5AA6D0;--gND:#9AA29A;
+    --seq5:#8FC9A8;--seq4:#63AE85;--seq3:#4A8168;--seq2:#37503F;--seq1:#28352B;}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
+  header.top{padding:52px 0 22px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 10px;}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,5vw,50px);margin:0 0 6px;
+    letter-spacing:-0.01em;color:var(--ink);}
+  .sub{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.2vw,21px);color:var(--muted);margin:0;}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:26px 0 8px;}
+  .stat{background:var(--card);padding:16px 18px;}
+  .stat .n{font-family:var(--serif);font-size:30px;color:var(--accent);line-height:1;
+    font-variant-numeric:tabular-nums;}
+  .stat .l{font-family:var(--mono);font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--muted);margin-top:7px;}
+  .stat .s{font-size:12px;color:var(--faint);margin-top:2px;}
+
+  .band{padding:30px 0 6px;}
+  .band > h2{font-family:var(--serif);font-size:22px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+  .band > .note{font-size:13.5px;color:var(--muted);margin:0 0 16px;max-width:64ch;}
+  .grid{display:grid;gap:16px;}
+  @media(min-width:760px){.grid.two{grid-template-columns:1fr 1fr;}
+    .grid.wide2{grid-template-columns:1.15fr 0.85fr;}}
+  figure.chart{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px 12px;}
+  figure.chart figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px;}
+  figure.chart .ct{font-size:14.5px;font-weight:650;color:var(--ink);}
+  figure.chart .cs{font-size:11.5px;color:var(--faint);font-family:var(--mono);}
+  .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;font-size:12px;color:var(--muted);}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .legend i{width:10px;height:10px;border-radius:3px;display:inline-block;}
+  svg{display:block;width:100%;height:auto;overflow:visible;}
+  .bl{fill:var(--ink-soft);font-size:12.5px;}
+  .bv{fill:var(--muted);font-size:12px;font-family:var(--mono);font-variant-numeric:tabular-nums;}
+  .ax{fill:var(--faint);font-size:11px;font-family:var(--mono);}
+  .gridline{stroke:var(--grid);stroke-width:1;}
+  .bar{transition:opacity .12s;cursor:default;}
+  .bar:hover{opacity:.82;}
+
+  .tip{position:fixed;pointer-events:none;z-index:50;background:var(--ink);color:var(--paper);
+    font-size:12px;font-family:var(--mono);padding:6px 9px;border-radius:6px;opacity:0;
+    transition:opacity .1s;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.25);}
+  .foot{color:var(--muted);font-size:12.5px;padding:26px 0 60px;border-top:1px solid var(--line);
+    margin-top:30px;}
+  .foot .mono{font-family:var(--mono);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  .atlas-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:0 22px;height:52px;background:var(--accent);}
+  .atlas-nav .brand-link{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--serif);
+    font-weight:600;font-size:18px;color:#fff;}
+  .atlas-nav .nav-mk{width:15px;height:15px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#9AD3B4,#173d2c);box-shadow:0 0 0 2px rgba(255,255,255,.28);}
+  .atlas-nav .nav-links{display:flex;gap:3px;}
+  .atlas-nav .nav-links a{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:rgba(255,255,255,.74);
+    text-decoration:none;padding:6px 12px;border-radius:7px;transition:background .12s,color .12s;}
+  .atlas-nav .nav-links a:hover{color:#fff;background:rgba(255,255,255,.14);}
+  .atlas-nav .nav-links a.on{color:#fff;background:rgba(255,255,255,.2);font-weight:600;}
+</style>
+
+<div class="tip" id="tip"></div>
+<nav class="atlas-nav"><a class="brand-link" href="index.html"><span class="nav-mk"></span> Ayahuasca Atlas</a><div class="nav-links"><a href="index.html">Map</a><a href="explore.html" class="on">Explore</a><a href="methodology.html">Methodology</a></div></nav>
+<div class="wrap">
+<header class="top">
+  <p class="eyebrow">Data Explorer · v1.1 working snapshot</p>
+  <h1>Ayahuasca Atlas</h1>
+  <p class="sub">What the dataset looks like today — 1,232 organizations, read from their own words</p>
+
+  <div class="stats" id="stats"></div>
+  <p class="note" style="font-size:12.5px;color:var(--faint);margin-top:10px">
+    All figures are self-described and unverified. Percentages of organizations are computed over the full
+    set of 1,232; multi-select fields (org type, medicines) sum to more than 100%.</p>
+</header>
+
+<section class="band">
+  <h2>Where they operate</h2>
+  <p class="note">The field spans 46 countries, but concentrates in the Amazon source region and the
+    Western markets that travel to it. Website language is the strongest single signal of who a site is
+    written for — and it skews heavily English.</p>
+  <div class="grid wide2">
+    <figure class="chart"><figcaption><span class="ct">Countries</span><span class="cs">top 12 of 46</span></figcaption><div id="c_countries"></div></figure>
+    <figure class="chart"><figcaption><span class="ct">Website language</span><span class="cs">primary authoring language</span></figcaption><div id="c_language"></div></figure>
+  </div>
+</section>
+
+<section class="band">
+  <h2>What they offer</h2>
+  <p class="note">A majority present as ceremonial or lineage-based rather than clinical or church —
+    the category the original 4-type scheme couldn't see. Ayahuasca rarely travels alone: most centers
+    work with several medicines. The median facilitating retreat runs about a week at ~$143 a night.</p>
+  <div class="grid two">
+    <figure class="chart"><figcaption><span class="ct">Organization type</span><span class="cs">multi-select · % of 1,232</span></figcaption><div id="c_orgtype"></div>
+      <div class="legend"><span><i style="background:var(--highlight)"></i>Atlas extension (ceremonial_traditional)</span><span><i style="background:var(--accent)"></i>source-paper categories</span></div></figure>
+    <figure class="chart"><figcaption><span class="ct">Other plant medicines offered</span><span class="cs">alongside ayahuasca</span></figcaption><div id="c_medicines"></div></figure>
+    <figure class="chart"><figcaption><span class="ct">Price per night</span><span class="cs">USD · 351 priced facilitating orgs</span></figcaption><div id="c_price"></div></figure>
+    <figure class="chart"><figcaption><span class="ct">Retreat length</span><span class="cs">nights offered</span></figcaption><div id="c_nights"></div></figure>
+  </div>
+</section>
+
+<section class="band">
+  <h2>Who runs them</h2>
+  <p class="note">A striking split in gendered labor: named <strong>healers</strong> (the ceremonial /
+    medicine role) skew male, while <strong>facilitators</strong> and support staff skew female. Gender
+    is coded only from explicit signals — pronouns or gendered role terms — so the large
+    “not determinable” share is the method refusing to guess from names.</p>
+  <div class="grid wide2">
+    <figure class="chart"><figcaption><span class="ct">Presented gender by role</span><span class="cs">4,495 named people</span></figcaption><div id="c_gender"></div>
+      <div class="legend"><span><i style="background:var(--gF)"></i>Female</span><span><i style="background:var(--gM)"></i>Male</span><span><i style="background:var(--gND)"></i>Not determinable</span></div></figure>
+    <figure class="chart"><figcaption><span class="ct">Indigenous affiliation</span><span class="cs">computed · as claimed, unverified</span></figcaption><div id="c_indig"></div></figure>
+  </div>
+</section>
+
+<section class="band">
+  <h2>How the dataset was built</h2>
+  <p class="note">Eight independent discovery channels feed the Atlas; because they recapture one
+    another, a capture–recapture model estimates we currently see about half of the directory-visible
+    facilitating population — the rest is structurally offline.</p>
+  <div class="grid wide2">
+    <figure class="chart"><figcaption><span class="ct">Discovery channel</span><span class="cs">orgs surfaced · overlapping</span></figcaption><div id="c_disc"></div></figure>
+    <figure class="chart"><figcaption><span class="ct">Inclusion population</span><span class="cs">the facilitation gate</span></figcaption><div id="c_fac"></div>
+      <p class="note" style="margin:14px 4px 2px;font-size:12.5px">741 of 1,232 organizations actually
+      facilitate ayahuasca (pathway A). The remaining 491 are integration-only or other-medicine
+      operations — kept, tagged, and filtered out of the core facilitating population.</p></figure>
+  </div>
+</section>
+</div>
+
+<div class="wrap"><div class="foot">
+  <span class="mono">AYAHUASCA ATLAS · v1.1 working snapshot · 1,232 organizations</span> — a research dataset.
+  All values are self-described and recorded as claims unless confirmed through the verification process.
+  Figures refresh with each build.
+</div></div>
+
+<script src="explore_data.js"></script>
+<script>
+const DATA = window.EXPLORE;
+const tip = document.getElementById('tip');
+const cvar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const NS = 'http://www.w3.org/2000/svg';
+function el(t, a){const e=document.createElementNS(NS,t); for(const k in (a||{})) e.setAttribute(k,a[k]); return e;}
+function showTip(html){tip.innerHTML=html; tip.style.opacity=1;}
+function moveTip(ev){tip.style.left=(ev.clientX+12)+'px'; tip.style.top=(ev.clientY-10)+'px';}
+function hideTip(){tip.style.opacity=0;}
+const commafy = n => n.toLocaleString('en-US');
+
+// horizontal bar chart
+function hbar(id, rows, opts={}){
+  const el0=document.getElementById(id); if(!el0) return;
+  const W=520, rowH=opts.rowH||30, padT=6, padB=4, lw=opts.labelW||128, vw=44;
+  const H=padT+padB+rows.length*rowH;
+  const max=Math.max(...rows.map(r=>r[1]));
+  const bx=lw, bw=W-lw-vw;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img'});
+  rows.forEach((r,i)=>{
+    const y=padT+i*rowH, bh=Math.min(18,rowH-10), by=y+(rowH-bh)/2;
+    const w=Math.max(2, bw*r[1]/max);
+    const color = opts.colorFn ? opts.colorFn(r,i) : cvar('--accent');
+    const lab=el('text',{x:bx-10,y:by+bh/2+4,'text-anchor':'end','class':'bl'}); lab.textContent=r[0]; svg.appendChild(lab);
+    const bar=el('rect',{x:bx,y:by,width:w,height:bh,rx:4,fill:color,'class':'bar'});
+    const pct = opts.total ? ` · ${(100*r[1]/opts.total).toFixed(0)}%` : '';
+    bar.addEventListener('mousemove',ev=>{showTip(`<b>${r[0]}</b> — ${commafy(r[1])}${pct}`);moveTip(ev);});
+    bar.addEventListener('mouseleave',hideTip);
+    svg.appendChild(bar);
+    const val=el('text',{x:bx+w+8,y:by+bh/2+4,'class':'bv'}); val.textContent=opts.fmt?opts.fmt(r[1]):commafy(r[1]); svg.appendChild(val);
+  });
+  el0.appendChild(svg);
+}
+
+// vertical histogram / bar
+function vbar(id, rows, opts={}){
+  const el0=document.getElementById(id); if(!el0) return;
+  const W=520, H=opts.H||210, padL=34, padR=8, padT=10, padB=opts.padB||34;
+  const max=Math.max(...rows.map(r=>r[1]));
+  const iw=W-padL-padR, ih=H-padT-padB, bw=iw/rows.length;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img'});
+  // y gridlines
+  const ticks=opts.yticks||4;
+  for(let t=0;t<=ticks;t++){const v=Math.round(max*t/ticks); const y=padT+ih-ih*t/ticks;
+    svg.appendChild(el('line',{x1:padL,y1:y,x2:W-padR,y2:y,'class':'gridline'}));
+    const tx=el('text',{x:padL-6,y:y+3,'text-anchor':'end','class':'ax'}); tx.textContent=v; svg.appendChild(tx);}
+  rows.forEach((r,i)=>{
+    const bh=Math.max(1, ih*r[1]/max), x=padL+i*bw+bw*0.14, w=bw*0.72, y=padT+ih-bh;
+    const bar=el('rect',{x,y,width:w,height:bh,rx:3,fill:opts.color||cvar('--accent'),'class':'bar'});
+    bar.addEventListener('mousemove',ev=>{showTip(`<b>${r[2]||r[0]}</b> — ${commafy(r[1])} ${opts.unit||''}`);moveTip(ev);});
+    bar.addEventListener('mouseleave',hideTip); svg.appendChild(bar);
+    if(opts.everyLabel || i%(opts.labelStep||1)===0){
+      const lx=el('text',{x:padL+i*bw+bw/2,y:H-padB+16,'text-anchor':'middle','class':'ax'}); lx.textContent=r[0]; svg.appendChild(lx);}
+  });
+  if(opts.medianX!=null){
+    const mx=padL + iw*opts.medianX;
+    svg.appendChild(el('line',{x1:mx,y1:padT,x2:mx,y2:padT+ih,stroke:cvar('--highlight'),'stroke-width':2,'stroke-dasharray':'4 3'}));
+    const t=el('text',{x:mx+5,y:padT+11,'class':'ax',fill:cvar('--highlight')}); t.textContent=opts.medianLabel; svg.appendChild(t);
+  }
+  el0.appendChild(svg);
+}
+
+// grouped bars (gender by role)
+function grouped(id, groups, series, colors){
+  const el0=document.getElementById(id); if(!el0) return;
+  const W=520, H=230, padL=8, padR=8, padT=10, padB=30;
+  const max=Math.max(...groups.flatMap(g=>g.vals));
+  const gw=(W-padL-padR)/groups.length, bw=gw*0.74/series.length, ticks=4, ih=H-padT-padB;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img'});
+  for(let t=0;t<=ticks;t++){const y=padT+ih-ih*t/ticks;
+    svg.appendChild(el('line',{x1:padL,y1:y,x2:W-padR,y2:y,'class':'gridline'}));
+    const tx=el('text',{x:padL+2,y:y-3,'class':'ax'}); tx.textContent=Math.round(max*t/ticks); svg.appendChild(tx);}
+  groups.forEach((g,gi)=>{
+    const gx=padL+gi*gw+gw*0.13;
+    g.vals.forEach((v,si)=>{
+      const bh=Math.max(1,ih*v/max), x=gx+si*bw, y=padT+ih-bh;
+      const bar=el('rect',{x:x+1,y,width:bw-2,height:bh,rx:3,fill:colors[si],'class':'bar'});
+      bar.addEventListener('mousemove',ev=>{showTip(`<b>${g.name}</b> · ${series[si]} — ${commafy(v)}`);moveTip(ev);});
+      bar.addEventListener('mouseleave',hideTip); svg.appendChild(bar);
+    });
+    const lx=el('text',{x:gx+gw*0.74/2,y:H-12,'text-anchor':'middle','class':'bl'}); lx.textContent=g.name; svg.appendChild(lx);
+  });
+  el0.appendChild(svg);
+}
+
+function stackedRow(id, rows, colors, labels){ // for facilitates (single stacked bar)
+  const el0=document.getElementById(id); if(!el0) return;
+  const W=520,H=120,pad=6, total=rows.reduce((s,r)=>s+r[1],0);
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`}); let x=pad; const bw=W-2*pad, bh=42, y=30;
+  rows.forEach((r,i)=>{const w=bw*r[1]/total;
+    const bar=el('rect',{x,y,width:Math.max(1,w-(i<rows.length-1?2:0)),height:bh,rx:5,fill:colors[i],'class':'bar'});
+    bar.addEventListener('mousemove',ev=>{showTip(`<b>${r[0]}</b> — ${commafy(r[1])} · ${(100*r[1]/total).toFixed(0)}%`);moveTip(ev);});
+    bar.addEventListener('mouseleave',hideTip); svg.appendChild(bar);
+    const t=el('text',{x:x+6,y:y+bh+20,'class':'bl',fill:colors[i]}); t.textContent=`${r[0]} · ${commafy(r[1])}`; svg.appendChild(t);
+    x+=w;});
+  el0.appendChild(svg);
+}
+
+// ---- render ----
+function stat(n,l,s){return `<div class="stat"><div class="n">${n}</div><div class="l">${l}</div>${s?`<div class="s">${s}</div>`:''}</div>`;}
+document.getElementById('stats').innerHTML =
+  stat(commafy(DATA.n),'Organizations') +
+  stat(commafy(DATA.facilitating),'Facilitate ayahuasca','60% of the set') +
+  stat(DATA.n_countries,'Countries') +
+  stat(commafy(DATA.named_people),'Named people') +
+  stat('$'+DATA.price_night_median,'Median / night','of '+DATA.priced+' priced') +
+  stat('~50%','Est. coverage','directory-visible');
+
+const cap = s => s.charAt(0).toUpperCase()+s.slice(1);
+hbar('c_countries', DATA.countries.map(r=>[r[0],r[1]]), {total:DATA.n});
+hbar('c_language', DATA.language.map(r=>[cap(r[0]),r[1]]), {total:DATA.n, labelW:96});
+hbar('c_orgtype', DATA.org_type.map(r=>[r[0].replace(/_/g,' '),r[1]]), {total:DATA.n, labelW:150,
+  colorFn:r=>r[0].indexOf('ceremonial')>-1?cvar('--highlight'):cvar('--accent'), fmt:v=>commafy(v)});
+hbar('c_medicines', DATA.medicines, {labelW:132});
+hbar('c_disc', DATA.discovery.map(r=>[r[0].replace(/_/g,' '),r[1]]), {labelW:132});
+
+// indigenous — sequential ramp by claim strength (order given)
+const seq=['--seq5','--seq4','--seq3','--seq2','--seq1'];
+hbar('c_indig', DATA.indigenous.map(r=>[r[0].replace(/-/g,' '),r[1]]), {total:DATA.n, labelW:170,
+  colorFn:(r,i)=>cvar(seq[i])});
+
+// price histogram — $50 bins to 600, then 600+
+(function(){
+  const vals=DATA.price_night, W=50, cap=600;
+  const bins=[]; for(let b=0;b<cap;b+=W) bins.push([`${b}`, 0, `$${b}–${b+W}`]);
+  bins.push([`${cap}+`,0,`$${cap}+`]);
+  vals.forEach(v=>{ const idx = v>=cap ? bins.length-1 : Math.floor(v/W); bins[idx][1]++; });
+  const labeled = bins.map((b,i)=>[i%2===0?b[0]:'', b[1], b[2]]);
+  const medianX = Math.min(DATA.price_night_median, cap)/cap;
+  vbar('c_price', labeled, {H:210, color:cvar('--accent'), unit:'orgs', everyLabel:true,
+    medianX, medianLabel:'median $'+DATA.price_night_median});
+})();
+
+// nights — sort by night length, show 1..14 then group 15+
+(function(){
+  const m=new Map(DATA.nights); const rows=[];
+  for(let d=1;d<=14;d++) rows.push([String(d), m.get(d)||0, `${d} night${d>1?'s':''}`]);
+  let plus=0; DATA.nights.forEach(([d,c])=>{if(d>14)plus+=c;});
+  rows.push(['15+', plus, '15+ nights']);
+  vbar('c_nights', rows, {H:210, color:cvar('--accent'), unit:'offerings', everyLabel:true});
+})();
+
+// gender grouped
+grouped('c_gender',
+  [{name:'Healers',vals:DATA.gender_by_role.healers},
+   {name:'Facilitators',vals:DATA.gender_by_role.facilitators},
+   {name:'Support staff',vals:DATA.gender_by_role.support_staff}],
+  ['Female','Male','Not determinable'],
+  [cvar('--gF'),cvar('--gM'),cvar('--gND')]);
+
+stackedRow('c_fac', DATA.facilitates, [cvar('--accent'),cvar('--gND')]);
+</script>
+
+</body>
+</html>

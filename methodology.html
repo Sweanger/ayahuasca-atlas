@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<title>Ayahuasca Atlas — Pipeline &amp; Methodology</title>
+<style>
+  :root{
+    --paper:#F1F3ED; --raise:#F8F9F4; --ink:#18211C; --ink-soft:#38443C;
+    --muted:#6C786F; --line:#D8DBCF; --line-soft:#E6E8DE;
+    --accent:#2E6B4E; --accent-ink:#1F4E38; --accent-wash:#E3EDE5;
+    /* derivation semantics — encode how each datum was produced */
+    --d-scraped:#3B6E8C; --d-coded:#A9741F; --d-computed:#6C786F;
+    --d-human:#2E6B4E; --d-restricted:#A2453A;
+    --d-scraped-w:#E4ECF1; --d-coded-w:#F1E8D6; --d-human-w:#E3EDE5; --d-restricted-w:#F1E1DE;
+    --serif:'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;
+    --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace;
+    --measure:68ch;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#12180F; --raise:#1A2016; --ink:#E9ECE1; --ink-soft:#BAC2B4;
+      --muted:#8B978C; --line:#2A3327; --line-soft:#222A20;
+      --accent:#63AE85; --accent-ink:#8FC9A8; --accent-wash:#1C2A22;
+      --d-scraped:#6FA6C4; --d-coded:#D6A44E; --d-computed:#8B978C;
+      --d-human:#63AE85; --d-restricted:#D0776B;
+      --d-scraped-w:#17252C; --d-coded-w:#2A2314; --d-human-w:#16241C; --d-restricted-w:#2A1815;
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#F1F3ED; --raise:#F8F9F4; --ink:#18211C; --ink-soft:#38443C;
+    --muted:#6C786F; --line:#D8DBCF; --line-soft:#E6E8DE; --accent:#2E6B4E;
+    --accent-ink:#1F4E38; --accent-wash:#E3EDE5; --d-scraped:#3B6E8C; --d-coded:#A9741F;
+    --d-computed:#6C786F; --d-human:#2E6B4E; --d-restricted:#A2453A;
+    --d-scraped-w:#E4ECF1; --d-coded-w:#F1E8D6; --d-human-w:#E3EDE5; --d-restricted-w:#F1E1DE;
+  }
+  :root[data-theme="dark"]{
+    --paper:#12180F; --raise:#1A2016; --ink:#E9ECE1; --ink-soft:#BAC2B4;
+    --muted:#8B978C; --line:#2A3327; --line-soft:#222A20; --accent:#63AE85;
+    --accent-ink:#8FC9A8; --accent-wash:#1C2A22; --d-scraped:#6FA6C4; --d-coded:#D6A44E;
+    --d-computed:#8B978C; --d-human:#63AE85; --d-restricted:#D0776B;
+    --d-scraped-w:#17252C; --d-coded-w:#2A2314; --d-human-w:#16241C; --d-restricted-w:#2A1815;
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px;}
+  .col{max-width:var(--measure);}
+  p{margin:0 0 1em;color:var(--ink-soft);}
+  a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:2px;
+    text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--accent) 45%,transparent);}
+  strong{color:var(--ink);font-weight:650;}
+  code,.mono{font-family:var(--mono);font-size:0.86em;}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 10px;}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--ink);text-wrap:balance;
+    line-height:1.12;letter-spacing:-0.01em;}
+
+  /* nav */
+  nav.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  nav.top .wrap{display:flex;align-items:center;gap:18px;height:52px;overflow-x:auto;}
+  nav.top .brand{font-family:var(--mono);font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--ink);white-space:nowrap;font-weight:600;}
+  nav.top a{font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;
+    white-space:nowrap;letter-spacing:0.03em;}
+  nav.top a:hover{color:var(--accent-ink);}
+
+  /* hero */
+  header.hero{padding:70px 0 30px;}
+  header.hero h1{font-size:clamp(38px,6vw,62px);margin:0 0 6px;}
+  header.hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,24px);
+    color:var(--muted);margin:0 0 30px;}
+  .lede{font-size:20px;line-height:1.6;color:var(--ink-soft);}
+  .lede strong{color:var(--ink);}
+
+  .scope{border-left:3px solid var(--accent);background:var(--accent-wash);
+    padding:18px 22px;border-radius:0 6px 6px 0;margin:28px 0 8px;}
+  .scope .eyebrow{color:var(--accent-ink);}
+  .scope p{margin:0;color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.5;}
+
+  section{padding:44px 0;border-top:1px solid var(--line-soft);}
+  section h2{font-size:clamp(26px,3.4vw,34px);margin:0 0 4px;}
+  section h2 .num{font-family:var(--mono);font-size:0.5em;color:var(--accent);font-weight:600;
+    vertical-align:middle;margin-right:12px;letter-spacing:0;}
+  section .kicker{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:18px;
+    margin:0 0 22px;}
+  h3{font-size:20px;margin:30px 0 8px;}
+
+  /* derivation chips */
+  .chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;
+    letter-spacing:0.05em;text-transform:uppercase;padding:3px 9px;border-radius:20px;
+    border:1px solid;font-weight:600;line-height:1.4;white-space:nowrap;}
+  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
+  .c-scraped{color:var(--d-scraped);background:var(--d-scraped-w);border-color:color-mix(in srgb,var(--d-scraped) 30%,transparent);}
+  .c-coded{color:var(--d-coded);background:var(--d-coded-w);border-color:color-mix(in srgb,var(--d-coded) 30%,transparent);}
+  .c-computed{color:var(--d-computed);background:var(--line-soft);border-color:var(--line);}
+  .c-human{color:var(--d-human);background:var(--d-human-w);border-color:color-mix(in srgb,var(--d-human) 30%,transparent);}
+  .c-restricted{color:var(--d-restricted);background:var(--d-restricted-w);border-color:color-mix(in srgb,var(--d-restricted) 30%,transparent);}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 4px;}
+
+  /* pipeline diagram */
+  .pipe{margin:10px 0 0;}
+  .stage{display:grid;grid-template-columns:44px 1fr;gap:18px;position:relative;padding-bottom:22px;}
+  .stage:not(:last-child)::before{content:"";position:absolute;left:21px;top:40px;bottom:-2px;
+    width:2px;background:var(--line);}
+  .stage .dot{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;
+    font-family:var(--mono);font-size:15px;font-weight:600;color:#fff;position:relative;z-index:1;}
+  .stage .body{padding-top:3px;}
+  .stage h4{margin:0 0 3px;font-family:var(--sans);font-size:16.5px;font-weight:650;color:var(--ink);
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .stage p{margin:0;font-size:15px;color:var(--muted);line-height:1.5;}
+  .stage .body code{color:var(--ink-soft);}
+  .branch{margin:2px 0 0 62px;border-left:2px dashed color-mix(in srgb,var(--d-human) 55%,transparent);
+    padding:2px 0 4px 18px;display:grid;gap:12px;}
+  .branch .lp{background:var(--d-human-w);border:1px solid color-mix(in srgb,var(--d-human) 30%,transparent);
+    border-radius:8px;padding:12px 14px;}
+  .branch .lp h5{margin:0 0 3px;font-size:14.5px;font-family:var(--sans);font-weight:650;color:var(--d-human);
+    display:flex;gap:8px;align-items:baseline;}
+  .branch .lp h5 span{font-family:var(--mono);font-size:11px;}
+  .branch .lp p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.5;}
+
+  /* cards / grid */
+  .grid{display:grid;gap:16px;margin:22px 0 4px;}
+  @media(min-width:620px){.grid.two{grid-template-columns:1fr 1fr;}}
+  .card{background:var(--raise);border:1px solid var(--line);border-radius:10px;padding:18px 20px;}
+  .card h4{margin:0 0 6px;font-size:15px;font-family:var(--sans);font-weight:650;color:var(--ink);}
+  .card p{margin:0;font-size:14.5px;color:var(--muted);}
+  .card ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px;}
+  .card li{margin:3px 0;}
+
+  ul.clean{list-style:none;padding:0;margin:16px 0;}
+  ul.clean li{padding:10px 0 10px 26px;border-top:1px solid var(--line-soft);position:relative;
+    color:var(--ink-soft);}
+  ul.clean li::before{content:"";position:absolute;left:2px;top:17px;width:8px;height:8px;
+    border-radius:2px;background:var(--accent);transform:rotate(45deg);}
+  ul.clean li strong{color:var(--ink);}
+
+  table{border-collapse:collapse;width:100%;font-size:14.5px;}
+  .scroll{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:10px;}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line-soft);vertical-align:top;}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--muted);background:var(--raise);font-weight:600;white-space:nowrap;}
+  td code{color:var(--ink);}
+  tr:last-child td{border-bottom:none;}
+  .num-cell{font-variant-numeric:tabular-nums;font-family:var(--mono);}
+
+  .bias{display:grid;gap:0;margin:20px 0;}
+  .bias .lvl{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:16px 0;
+    border-top:1px solid var(--line-soft);}
+  .bias .lvl .tag{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);
+    white-space:nowrap;padding-top:2px;}
+  .bias .lvl h4{margin:0 0 2px;font-size:16px;font-family:var(--sans);}
+  .bias .lvl p{margin:0;font-size:14.5px;color:var(--muted);}
+
+  .callout{background:var(--d-restricted-w);border:1px solid color-mix(in srgb,var(--d-restricted) 28%,transparent);
+    border-radius:10px;padding:16px 20px;margin:20px 0;}
+  .callout .eyebrow{color:var(--d-restricted);}
+  .callout p{margin:0;color:var(--ink-soft);font-size:15px;}
+
+  .stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:20px 0;}
+  .stat{background:var(--raise);padding:16px 18px;}
+  .stat .n{font-family:var(--serif);font-size:30px;color:var(--accent-ink);line-height:1;
+    font-variant-numeric:tabular-nums;}
+  .stat .l{font-family:var(--mono);font-size:11px;letter-spacing:0.05em;text-transform:uppercase;
+    color:var(--muted);margin-top:6px;}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 70px;color:var(--muted);font-size:14px;}
+  footer .mono{color:var(--muted);}
+  .disc{font-size:13.5px;color:var(--muted);font-style:italic;}
+  @media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth;}}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
+</style>
+
+<nav class="top"><div class="wrap"><a class="brand" href="index.html" style="text-decoration:none;color:var(--ink)">Ayahuasca Atlas</a><a href="index.html">Map</a><a href="explore.html">Explore</a><a href="methodology.html" style="color:var(--accent-ink);font-weight:600">Methodology</a></div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <p class="eyebrow">Transparency record &nbsp;·&nbsp; v1.1 build</p>
+  <h1>Pipeline &amp; Methodology</h1>
+  <p class="sub">How the Ayahuasca Atlas is built, and how to trust it</p>
+  <div class="col">
+    <p class="lede">The Atlas is a reproducible, multilingual dataset of organizations worldwide
+    that publicly offer or facilitate ayahuasca. This document traces <strong>every stage a record
+    passes through</strong> — from the search query that surfaced it to the frozen, versioned
+    snapshot — and marks, at each step, <strong>what was captured, what a model inferred, and what a
+    human verified.</strong></p>
+  </div>
+  <div class="scope col">
+    <p class="eyebrow">Canonical scope statement</p>
+    <p>“The Ayahuasca Atlas is a directory, not a rating engine. All information is recorded as
+    self-described and unverified unless explicitly marked as confirmed through the verification
+    process.”</p>
+  </div>
+</header>
+</div>
+
+<div class="wrap">
+<section id="pipeline">
+  <p class="eyebrow">The lineage of a record</p>
+  <h2><span class="num">01</span>The pipeline</h2>
+  <p class="kicker col">Ten stages, each resumable and logged. Two of them are human.</p>
+  <div class="col">
+    <p>Every datum carries its provenance. The colour of each stage below states how the values it
+    produces are derived — the same legend used throughout the codebook:</p>
+  </div>
+  <div class="legend">
+    <span class="chip c-scraped">Scraped</span>
+    <span class="chip c-coded">LLM-coded</span>
+    <span class="chip c-computed">Computed</span>
+    <span class="chip c-human">Human-validated</span>
+    <span class="chip c-restricted">Restricted in public deposit</span>
+  </div>
+
+  <div class="pipe" role="list">
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-scraped)">1</div>
+      <div class="body">
+        <h4>Discovery <span class="chip c-scraped">Scraped</span></h4>
+        <p>Five directory seeds (AyaAdvisors, Retreat.Guru, Third Wave, Safe Ceremonies,
+        Psychedelic.Support), multilingual web search (EN·ES·PT), Google Places, a native-term sweep
+        (<code>yagé · daime · hoasca · caapi</code>), and a snowball link-graph over captured sites.
+        Every candidate is logged with its <code>discovery_sources</code> — so any single channel can
+        be filtered out later, and cross-source overlap is measurable.</p>
+      </div>
+    </div>
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-scraped)">2</div>
+      <div class="body">
+        <h4>Capture <span class="chip c-scraped">Scraped</span></h4>
+        <p>A polite crawler (honours <code>robots.txt</code>, per-domain rate limits, bounded
+        backoff) fetches each page. Raw HTML is cached, the live page is submitted to the
+        <strong>Wayback Machine at capture time</strong> (<code>source_archive_url</code>), and the
+        search origin is recorded (<code>scrape_origin</code>) — provenance that cannot be
+        reconstructed after a site changes or disappears.</p>
+      </div>
+    </div>
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-coded)">3</div>
+      <div class="body">
+        <h4>Extraction <span class="chip c-coded">LLM-coded</span></h4>
+        <p>A language model reads the cached text under strict <em>stated-only</em> rules and emits one
+        structured record. Claims stay claims; nulls are meaningful; nothing is inferred from imagery.
+        Gender is coded only from explicit signals. See <a href="#extraction">§4</a>.</p>
+      </div>
+    </div>
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-computed)">4</div>
+      <div class="body">
+        <h4>Normalization <span class="chip c-computed">Computed</span></h4>
+        <p>Prices converted to USD against a dated FX snapshot, per-night rates computed, locations
+        geocoded. Arithmetic only — no new facts introduced.</p>
+      </div>
+    </div>
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-computed)">5</div>
+      <div class="body">
+        <h4>Derivation <span class="chip c-computed">Computed</span></h4>
+        <p>The exclusive <code>indigenous_affiliation_display</code> bucket and the gender roll-ups are
+        computed <strong>in code</strong> from the underlying claim fields by a documented first-match
+        rule — never hand-entered or guessed by the model, so the projection is auditable and always
+        reproduces from the same claims.</p>
+      </div>
+    </div>
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-computed)">6</div>
+      <div class="body">
+        <h4>Deduplication <span class="chip c-computed">Computed</span></h4>
+        <p>The same organization found through several channels is merged on name similarity + geographic
+        proximity + shared domain. Merged records union their offerings and their
+        <code>discovery_sources</code>; nothing is silently dropped.</p>
+      </div>
+    </div>
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-coded)">7</div>
+      <div class="body">
+        <h4>Classification <span class="chip c-coded">LLM-coded</span></h4>
+        <p>Organization type (<code>wellness · religious · medical · ceremonial_traditional · other</code>),
+        individual-vs-organization, and <code>facilitates_ayahuasca</code> — the operational inclusion
+        gate. This is the automated decision the relevance-gate study below validates.</p>
+      </div>
+    </div>
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-human)">8</div>
+      <div class="body">
+        <h4>Human validation <span class="chip c-human">Human-validated</span></h4>
+        <p>Two independent coders, blind to the model, code stratified subsamples. Agreement (κ) is
+        computed per field and per language <em>before</em> any reconciliation. Fields that fail their
+        threshold are human-recoded before deposit.</p>
+        <div class="branch">
+          <div class="lp">
+            <h5>Loop A — Relevance gate <span>include / exclude</span></h5>
+            <p>Coders judge whether each organization is in scope; compared against the model's
+            <code>facilitates_ayahuasca</code>. Cohen's κ shows the inclusion rule is codable.</p>
+          </div>
+          <div class="lp">
+            <h5>Loop B — Qualitative variables <span>Tier-A fields</span></h5>
+            <p>Coders code the interpretive fields (org type, the indigenous claim-cluster, sourcing,
+            reciprocity, healer/facilitator split, presented gender) against a human gold standard.
+            Per-field, per-language κ / α is the number reported in the dataset descriptor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-computed)">9</div>
+      <div class="body">
+        <h4>Coverage estimation <span class="chip c-computed">Computed</span></h4>
+        <p>Because discovery runs through independent channels, a capture–recapture model estimates the
+        total population — including organizations never found — and therefore an honest coverage rate.
+        See <a href="#coverage">§6</a>.</p>
+      </div>
+    </div>
+    <div class="stage" role="listitem">
+      <div class="dot" style="background:var(--d-restricted)">10</div>
+      <div class="body">
+        <h4>Freeze &amp; deposit <span class="chip c-restricted">Restricted</span></h4>
+        <p>A versioned snapshot is frozen once the coverage check passes, validated on the frozen object,
+        then filtered through the sensitivity tiers (<a href="#access">§7</a>) to produce the public
+        deposit — precise locations, revenue estimates, and named individuals held back for governed
+        access.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="inclusion">
+  <p class="eyebrow">What counts, and what doesn't</p>
+  <h2><span class="num">02</span>The inclusion rule</h2>
+  <p class="kicker col">One rule, two pathways, decided from an organization's own words.</p>
+  <div class="col">
+    <p>An organization — center, church, collective, or individual practitioner — is included if, in
+    its own public self-description, <strong>either</strong> of two pathways holds. Discovery
+    deliberately over-collects; the rule is what narrows it, and Loop&nbsp;A measures whether two humans
+    apply that rule the same way.</p>
+  </div>
+  <div class="grid two">
+    <div class="card">
+      <h4>Pathway A — facilitation</h4>
+      <p>It offers or facilitates ayahuasca in any form, <em>including as a religious sacrament.</em>
+      <code>facilitates_ayahuasca = true</code>.</p>
+    </div>
+    <div class="card">
+      <h4>Pathway B — integration</h4>
+      <p>It offers ayahuasca-<em>specific</em> integration or preparation services — the word
+      “ayahuasca” appears in the service itself, even if no medicine changes hands.</p>
+    </div>
+  </div>
+  <ul class="clean col">
+    <li><strong>Out of scope:</strong> generic wellness, therapy, or “psychedelic” work with no stated
+    ayahuasca link; san-pedro / kambo / bufo-only operations; brokers and aggregators (used as
+    discovery sources, never counted as organizations); one-off events.</li>
+    <li><strong>Churches are in.</strong> Sacramental use is facilitation. A congregational church
+    (Santo Daime, UDV) with no priced packages is recorded with an access model, not forced into a
+    retreat shape — the <em>absence</em> of pricing is data.</li>
+    <li><strong>Defunct sites are kept.</strong> Status is flagged, not deleted; longitudinal churn is
+    signal.</li>
+  </ul>
+</section>
+
+<section id="extraction">
+  <p class="eyebrow">The interpretive layer, disciplined</p>
+  <h2><span class="num">03</span>Extraction under stated-only rules</h2>
+  <p class="kicker col">The model records what a page says — not what it seems to imply.</p>
+  <div class="col">
+    <p>Extraction is where a language model does the most work and therefore carries the heaviest
+    validation burden. Three rules constrain it, and each is checked in the human study:</p>
+  </div>
+  <div class="grid two">
+    <div class="card">
+      <h4>Claims stay claims</h4>
+      <p>Indigenous involvement, community benefit, sourcing and reciprocity are captured with a
+      <code>_claimed</code> suffix and, where possible, verbatim. A downstream user who never sees the
+      site cannot mistake a marketing claim for a verified fact.</p>
+    </div>
+    <div class="card">
+      <h4>Gender from explicit signals only</h4>
+      <p>A person's presented gender is coded only from an explicit statement, pronouns, or a
+      grammatically gendered role term (<code>curandera</code> vs <code>curandero</code>) —
+      <strong>never</strong> from a name, a photo, or appearance. No signal → <code>not_determinable</code>.</p>
+    </div>
+    <div class="card">
+      <h4>Nulls are meaningful</h4>
+      <p>“Not stated” is kept distinct from “explicitly none.” A church with no listed price and a
+      retreat that lists none are different facts, and the schema preserves the difference.</p>
+    </div>
+    <div class="card">
+      <h4>No affiliation verdict from the model</h4>
+      <p>The model emits the underlying claims; the exclusive Indigenous-affiliation bucket is
+      <em>computed</em> downstream by rule. The model never decides identity.</p>
+    </div>
+  </div>
+  <div class="callout col">
+    <p class="eyebrow" style="margin-bottom:6px">Observed in testing</p>
+    <p>Against live pages the rule holds: a page naming “Maestra Monika” is coded <em>female</em> (gendered
+    term); “Steve,” <em>male</em> (pronoun); but “Teri,” “Tata,” and “Capitán” are left
+    <em>not_determinable</em> — the model does not guess gender from a name.</p>
+  </div>
+</section>
+
+<section id="validation">
+  <p class="eyebrow">Treating the model as a coder</p>
+  <h2><span class="num">04</span>Human-vs-LLM validation</h2>
+  <p class="kicker col">Automated coding is scalable; validating it is how it earns trust.</p>
+  <div class="col">
+    <p>The resolution is standard and publishable: treat the model as one coder and validate it against
+    a human gold standard. Two people independently code stratified subsamples, blind to the model and
+    to each other. We report inter-human agreement (the task is well-defined) and model-vs-human
+    agreement (the model is accurate) — computed <strong>before</strong> reconciliation, so the numbers
+    describe exactly the deposited data.</p>
+  </div>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Study</th><th>Pool &amp; sampling</th><th>What coders decide</th><th>Statistic</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>A · Relevance gate</strong></td>
+          <td>All deduped orgs, over-sampling the model's excluded / borderline class so the gate is
+          actually tested</td>
+          <td><code>include / exclude</code> + inclusion pathway</td>
+          <td>Cohen's κ (human–human); accuracy &amp; κ of the model gate vs the human consensus</td>
+        </tr>
+        <tr>
+          <td><strong>B · Qualitative</strong></td>
+          <td>Stratified <strong>by website language</strong> (EN·ES·PT·other) with a floor per stratum,
+          so a per-language κ is computable</td>
+          <td>Org type, indigenous claim-cluster, sourcing, reciprocity, healer/facilitator split,
+          safety, language</td>
+          <td>Per-field, per-language κ / Krippendorff's α; multi-select via Jaccard + per-category κ</td>
+        </tr>
+        <tr>
+          <td><strong>B′ · Gender</strong></td>
+          <td>Every named person in the Study-B sample</td>
+          <td><code>gender_presented</code> + which explicit signal justified it</td>
+          <td>κ on presented gender; agreement expected higher in ES/PT (gendered role terms)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <p>The threshold is explicit: high agreement (κ ≳ 0.75) validates the model for that field at scale;
+    low agreement sends that field — <em>and only that field</em> — to human coding. Coders work from
+    the same cleaned page text the model saw, delivered as blind spreadsheets with the model's answers
+    held in a separate key. Every value is traceable to whether a human or the model produced it.</p>
+  </div>
+</section>
+
+<section id="coverage">
+  <p class="eyebrow">How much of the field do we see?</p>
+  <h2><span class="num">05</span>Coverage, estimated honestly</h2>
+  <p class="kicker col">The organizations we can't find are part of the finding.</p>
+  <div class="col">
+    <p>Independent discovery channels recapture one another, which lets a capture–recapture model
+    (log-linear multiple-systems estimation) estimate the total population — including organizations no
+    channel found. The directory-visible facilitating population is estimated at roughly
+    <strong>half-covered and stable</strong>: each new discovery lever surfaces fewer net-new centers
+    while the estimated population holds, which is itself the result — the web-visible field is
+    near-saturated, and its remainder is structurally offline.</p>
+  </div>
+  <div class="stat-row">
+    <div class="stat"><div class="n">~50%</div><div class="l">Directory-visible coverage</div></div>
+    <div class="stat"><div class="n">8</div><div class="l">Discovery channels</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">Query languages</div></div>
+    <div class="stat"><div class="n">10</div><div class="l">Pipeline stages</div></div>
+  </div>
+  <p class="disc col">Figures describe the current working snapshot and refresh with each build; the
+  frozen v1.0 deposit carries the exact numbers as of its freeze date.</p>
+</section>
+
+<section id="bias">
+  <p class="eyebrow">Four filters between the field and the dataset</p>
+  <h2><span class="num">06</span>The bias framework</h2>
+  <p class="kicker col">Each level is a distinct agent of distortion — kept separate, not blurred into “data is biased.”</p>
+  <div class="bias col">
+    <div class="lvl"><span class="tag">Level 1</span><div>
+      <h4>The medium's filter</h4>
+      <p>What a website omits or spins. Answered by the <code>_claimed</code> architecture and
+      unverifiable sourcing/reciprocity fields.</p></div></div>
+    <div class="lvl"><span class="tag">Level 2</span><div>
+      <h4>Broadcasting as selection</h4>
+      <p>Having a web presence at all is non-random — it over-represents English-language,
+      Western-facing operations. Measured across language, org type, and region; the same gradient
+      reappears in the economic data.</p></div></div>
+    <div class="lvl"><span class="tag">Level 3</span><div>
+      <h4>The observer's imposition</h4>
+      <p>Aggregating and publishing creates a legibility that did not exist, done by non-Indigenous
+      researchers. Answered by the positionality statement, the canonical scope sentence, and the
+      capture-only architecture.</p></div></div>
+    <div class="lvl"><span class="tag">Level 4</span><div>
+      <h4>The review skew</h4>
+      <p>Who writes online reviews skews Western / tourist / extreme-valence — compounding Level 2
+      rather than correcting it. Handled as a separate, IRB-gated data regime.</p></div></div>
+  </div>
+</section>
+
+<section id="access">
+  <p class="eyebrow">Open where it characterizes, closed where it targets</p>
+  <h2><span class="num">07</span>What is public, and what is held back</h2>
+  <p class="kicker col">The project's answer to the tension between open data and Indigenous data governance.</p>
+  <div class="col">
+    <p>The deposit distinguishes three tiers: the live site, the frozen public deposit, and an internal
+    analytic tier that is collected but not published. The principle is to <strong>deposit what
+    characterizes the field and withhold what would target the individuals or organizations within
+    it</strong> — CARE-aligned caution appropriate to an unaffiliated, pre-partnership project.</p>
+  </div>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Field group</th><th>Public deposit</th><th>Internal tier</th></tr></thead>
+      <tbody>
+        <tr><td>Location</td><td>Country + region only</td><td>Precise address / coordinates</td></tr>
+        <tr><td>Named individuals &amp; healers</td><td>“Named healer present” + verbatim role term; <strong>names withheld</strong></td><td>Names &amp; communities</td></tr>
+        <tr><td>Revenue estimates</td><td>Withheld entirely</td><td>Full</td></tr>
+        <tr><td>Legal-entity detail</td><td>Coarse category only</td><td>Full registry / EIN table</td></tr>
+        <tr><td>Advertised prices, org type, coarse geography, claims</td><td>Public</td><td>Full</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <p>CARE obligations attach with particular force to the Indigenous-data subset — the fields
+    recording Indigenous identity, knowledge, or representation. For those, the project practices what
+    an unaffiliated team can unilaterally: verbatim capture with no imposed taxonomy, restricted deposit
+    of named individuals, a correction-and-dispute channel, and a stated collective-benefit intention —
+    and names plainly what remains owed: community governance and authority to control, which require a
+    partnership not yet in place.</p>
+  </div>
+</section>
+</div>
+
+<div class="wrap">
+<footer>
+  <p class="mono">AYAHUASCA ATLAS · Build &amp; Data Dictionary · Master document v1.1 &nbsp;·&nbsp;
+  Derek Lukacsko &amp; James Hale</p>
+  <p class="disc">A research dataset. All organizational claims are recorded as self-described and
+  unverified unless explicitly confirmed through the verification process. Every stage of the pipeline
+  is version-controlled; the frozen snapshot is deposited under a versioned DOI matching its atlas
+  version.</p>
+</footer>
+</div>
+
+</body>
+</html>

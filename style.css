@@ -184,3 +184,29 @@ body {
   #layout { flex-direction: column; }
   #sidebar { width: 100%; max-height: 42vh; border-right: none; border-bottom: 1px solid var(--line); }
 }
+
+/* ---- shared cross-page site nav ---- */
+.atlas-nav {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 0 18px; height: 48px; flex-shrink: 0;
+  background: var(--green-deep); color: #fff;
+}
+.atlas-nav .brand-link {
+  display: flex; align-items: center; gap: 9px; text-decoration: none;
+  font-family: Georgia, 'Times New Roman', serif; font-weight: 600; font-size: 17px;
+  color: #fff; letter-spacing: .01em;
+}
+.atlas-nav .nav-mk {
+  width: 15px; height: 15px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--green), #1b4432);
+  box-shadow: 0 0 0 2px rgba(255,255,255,.25);
+}
+.atlas-nav .nav-links { display: flex; gap: 3px; }
+.atlas-nav .nav-links a {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 12.5px;
+  letter-spacing: .03em; color: rgba(255,255,255,.72); text-decoration: none;
+  padding: 6px 12px; border-radius: 7px; transition: background .12s, color .12s;
+}
+.atlas-nav .nav-links a:hover { color: #fff; background: rgba(255,255,255,.12); }
+.atlas-nav .nav-links a.on { color: #fff; background: rgba(255,255,255,.18); font-weight: 600; }
+@media (max-width: 640px) { .atlas-nav .brand-link { font-size: 15px; } .atlas-nav { padding: 0 12px; } }
