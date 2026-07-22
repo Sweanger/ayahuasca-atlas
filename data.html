@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ayahuasca Atlas — Full Dataset</title>
+<style>
+  :root{
+    --paper:#F1F3ED;--raise:#FAFBF6;--card:#FFFFFF;--ink:#18211C;--ink-soft:#3A463E;
+    --muted:#68746B;--faint:#96A096;--line:#E0E3D8;--zebra:#F5F7F2;
+    --accent:#2E6B4E;--accent-ink:#1F4E38;--accent-soft:#DDE9E0;--highlight:#B0791F;
+    --serif:'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;
+    --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --paper:#11170F;--raise:#191F15;--card:#1C2318;--ink:#E9ECE1;--ink-soft:#BEC6B8;
+    --muted:#8B978C;--faint:#69766B;--line:#2A3327;--zebra:#181E14;--accent:#63AE85;
+    --accent-ink:#8FC9A8;--accent-soft:#1E2C23;--highlight:#D6A24E;}}
+  :root[data-theme="light"]{color-scheme:light;--paper:#F1F3ED;--raise:#FAFBF6;--card:#FFFFFF;
+    --ink:#18211C;--ink-soft:#3A463E;--muted:#68746B;--faint:#96A096;--line:#E0E3D8;--zebra:#F5F7F2;
+    --accent:#2E6B4E;--accent-ink:#1F4E38;--accent-soft:#DDE9E0;--highlight:#B0791F;}
+  :root[data-theme="dark"]{color-scheme:dark;--paper:#11170F;--raise:#191F15;--card:#1C2318;
+    --ink:#E9ECE1;--ink-soft:#BEC6B8;--muted:#8B978C;--faint:#69766B;--line:#2A3327;--zebra:#181E14;
+    --accent:#63AE85;--accent-ink:#8FC9A8;--accent-soft:#1E2C23;--highlight:#D6A24E;}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;}
+  .atlas-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:0 22px;height:52px;background:var(--accent);}
+  .atlas-nav .brand-link{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--serif);
+    font-weight:600;font-size:18px;color:#fff;}
+  .atlas-nav .nav-mk{width:15px;height:15px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#9AD3B4,#173d2c);box-shadow:0 0 0 2px rgba(255,255,255,.28);}
+  .atlas-nav .nav-links{display:flex;gap:3px;}
+  .atlas-nav .nav-links a{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:rgba(255,255,255,.74);
+    text-decoration:none;padding:6px 12px;border-radius:7px;transition:background .12s,color .12s;}
+  .atlas-nav .nav-links a:hover{color:#fff;background:rgba(255,255,255,.14);}
+  .atlas-nav .nav-links a.on{color:#fff;background:rgba(255,255,255,.2);font-weight:600;}
+
+  .wrap{max-width:1280px;margin:0 auto;padding:26px 20px 60px;}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(26px,4vw,38px);margin:0 0 4px;}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 18px;}
+  .sub b{color:var(--ink);font-variant-numeric:tabular-nums;}
+
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 16px;}
+  .search{flex:1;min-width:210px;position:relative;}
+  .search input{width:100%;padding:9px 12px 9px 34px;border:1px solid var(--line);border-radius:9px;
+    background:var(--card);color:var(--ink);font-size:14px;font-family:var(--sans);}
+  .search input:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+  .search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;
+    stroke:var(--faint);fill:none;stroke-width:2;}
+  .cbx{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);cursor:pointer;
+    padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:var(--card);}
+  .cbx input{accent-color:var(--accent);}
+  .dl{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-family:var(--mono);font-size:12.5px;
+    color:#fff;background:var(--accent);padding:9px 14px;border-radius:9px;font-weight:600;}
+  .dl.alt{background:var(--card);color:var(--accent-ink);border:1px solid var(--accent);}
+  .dl:hover{filter:brightness(1.06);}
+
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card);}
+  table{border-collapse:collapse;width:100%;font-size:13px;}
+  thead th{position:sticky;top:52px;background:var(--raise);z-index:5;text-align:left;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;padding:10px 12px;border-bottom:2px solid var(--line);white-space:nowrap;cursor:pointer;
+    user-select:none;}
+  thead th:hover{color:var(--accent-ink);}
+  thead th.sorted{color:var(--accent-ink);}
+  thead th .arw{opacity:.5;font-size:9px;}
+  tbody td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-soft);
+    max-width:260px;}
+  tbody tr:nth-child(even){background:var(--zebra);}
+  tbody tr:hover{background:var(--accent-soft);}
+  td.name{font-weight:600;color:var(--ink);white-space:nowrap;max-width:none;}
+  td.num{font-variant-numeric:tabular-nums;font-family:var(--mono);text-align:right;white-space:nowrap;}
+  td a{color:var(--accent-ink);text-decoration:none;}
+  td a:hover{text-decoration:underline;}
+  .pill{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:1px 7px;border-radius:20px;
+    background:var(--accent-soft);color:var(--accent-ink);white-space:nowrap;}
+  .pill.lead{background:transparent;border:1px dashed var(--faint);color:var(--muted);}
+  .pill.no{background:transparent;color:var(--faint);}
+  .muted{color:var(--faint);}
+  .foot{margin-top:16px;font-size:12px;color:var(--muted);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+</head>
+<body>
+<nav class="atlas-nav">
+  <a class="brand-link" href="index.html"><span class="nav-mk"></span> Ayahuasca Atlas</a>
+  <div class="nav-links">
+    <a href="index.html">Map</a><a href="explore.html">Explore</a>
+    <a href="methodology.html">Methodology</a><a href="data.html" class="on">Data</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1>Full dataset</h1>
+  <p class="sub"><b id="shown">–</b> of <b id="total">–</b> organizations · self-described, unverified ·
+    v1.1 working snapshot</p>
+
+  <div class="toolbar">
+    <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="q" type="search" placeholder="Search name, country, city, lineage…" autocomplete="off"></label>
+    <label class="cbx"><input type="checkbox" id="leads"> include Maps-only leads</label>
+    <label class="cbx"><input type="checkbox" id="faconly" checked> facilitating only</label>
+    <a class="dl" id="csv" href="ayahuasca_atlas_v1.1.csv" download>⤓ CSV (full, 73 cols)</a>
+    <a class="dl alt" href="retreats.json" download>⤓ JSON</a>
+  </div>
+
+  <div class="tablewrap">
+    <table><thead><tr id="head"></tr></thead><tbody id="body"></tbody></table>
+  </div>
+  <p class="foot">Sortable — click a column header. The CSV download is the complete research table (all
+    fields, including some coarsened per the data-sensitivity policy). Precise locations, named
+    individuals, and revenue estimates are withheld from these public files.</p>
+</div>
+
+<script src="data.js"></script>
+<script>
+const R = (window.RETREATS || []);
+const $ = id => document.getElementById(id);
+const esc = s => String(s==null?"":s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const arr = v => Array.isArray(v) ? v : [];
+const cap = s => s ? s.charAt(0).toUpperCase()+s.slice(1) : "";
+const affLabel = s => !s ? "—" : s.replace(/-/g," ").replace(/\bnon indigenous\b/,"").trim();
+
+function genderStr(g){ if(!g) return "—"; const f=g.female||0,m=g.male||0,n=g.nd||0;
+  if(!(f+m+n)) return "—"; return `${f}♀ ${m}♂${n?` · ${n}?`:""}`; }
+
+const COLS = [
+  {k:"name",   label:"Name", cls:"name", get:r=>r.name||"—",
+     cell:r=> r.website ? `<a href="${esc(r.website)}" target="_blank" rel="noopener">${esc(r.name||"—")}</a>` : esc(r.name||"—")},
+  {k:"country",label:"Country", get:r=>r.country||""},
+  {k:"city",   label:"City", get:r=>r.city||"", cell:r=>esc(r.city||"—")},
+  {k:"type",   label:"Type", get:r=>arr(r.org_type).join(", "),
+     cell:r=> r.maps_only ? `<span class="pill lead">maps lead</span>` :
+       (arr(r.org_type).map(t=>`<span class="pill">${esc(t.replace(/_/g," "))}</span>`).join(" ")||`<span class="muted">—</span>`)},
+  {k:"fac",    label:"Ayahuasca", get:r=>r.facilitates_ayahuasca?1:0, num:true,
+     cell:r=> r.facilitates_ayahuasca ? `<span class="pill">yes</span>` : `<span class="pill no">no/uncl.</span>`},
+  {k:"aff",    label:"Affiliation", get:r=>affLabel(r.indigenous), cell:r=>esc(affLabel(r.indigenous))},
+  {k:"price",  label:"$/night", get:r=> r.price_night_min ?? r.price_night_max ?? -1, num:true,
+     cell:r=>{const a=r.price_night_min,b=r.price_night_max; if(a==null&&b==null)return `<span class="muted">—</span>`;
+       return `$${a??b}${b&&b!==a?`–${b}`:""}`;}},
+  {k:"nights", label:"Nights", get:r=> Math.min(...(arr(r.nights).length?r.nights:[99])), num:true,
+     cell:r=> arr(r.nights).length ? esc([...r.nights].sort((x,y)=>x-y).join(", ")) : `<span class="muted">—</span>`},
+  {k:"meds",   label:"Medicines", get:r=>arr(r.medicines).length, num:true,
+     cell:r=>{const m=arr(r.medicines); return m.length? esc(m.slice(0,4).join(", "))+(m.length>4?` +${m.length-4}`:"") : `<span class="muted">—</span>`;}},
+  {k:"langs",  label:"Languages", get:r=>arr(r.languages).join(","), cell:r=>esc(arr(r.languages).map(cap).slice(0,3).join(", ")||"—")},
+  {k:"team",   label:"Team ♀♂", get:r=> (r.gender?(r.gender.female||0)+(r.gender.male||0)+(r.gender.nd||0):0), num:true,
+     cell:r=>genderStr(r.gender)},
+  {k:"status", label:"Status", get:r=>r.status||"active",
+     cell:r=> r.status && r.status!=="active" ? `<span class="pill no">${esc(r.status.replace(/_/g," "))}</span>` : "active"},
+];
+
+let sortK="name", dir=1;
+function head(){
+  $("head").innerHTML = COLS.map(c=>`<th data-k="${c.k}" class="${c.k===sortK?'sorted':''}">${c.label}`
+    +`<span class="arw"> ${c.k===sortK?(dir>0?"▲":"▼"):"↕"}</span></th>`).join("");
+  document.querySelectorAll("#head th").forEach(th=>th.onclick=()=>{
+    const k=th.dataset.k; dir = (k===sortK)?-dir:1; sortK=k; render();});
+}
+function current(){
+  const q=$("q").value.trim().toLowerCase();
+  let rows=R;
+  if(!$("leads").checked) rows=rows.filter(r=>!r.maps_only);
+  // "facilitating only" trims non-facilitating orgs but keeps Maps-only leads (unconfirmed)
+  if($("faconly").checked) rows=rows.filter(r=>r.maps_only || r.facilitates_ayahuasca);
+  if(q) rows=rows.filter(r=> [r.name,r.country,r.city,affLabel(r.indigenous),arr(r.lineage).join(" ")]
+    .join(" ").toLowerCase().includes(q));
+  const col=COLS.find(c=>c.k===sortK);
+  return [...rows].sort((a,b)=>{const av=col.get(a),bv=col.get(b);
+    return (col.num? av-bv : String(av).localeCompare(String(bv)))*dir;});
+}
+function render(){
+  head();
+  const rows=current();
+  $("shown").textContent=rows.length.toLocaleString();
+  const html=rows.slice(0,2000).map(r=>"<tr>"+COLS.map(c=>{
+    const v=c.cell?c.cell(r):esc(c.get(r));
+    return `<td class="${c.cls||''}${c.num?' num':''}">${v}</td>`;}).join("")+"</tr>").join("");
+  $("body").innerHTML=html;
+}
+$("total").textContent = R.filter(r=>!r.maps_only).length.toLocaleString();
+["q","leads","faconly"].forEach(id=>$(id).addEventListener("input",render));
+render();
+</script>
+</body>
+</html>
