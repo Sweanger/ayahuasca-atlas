@@ -139,6 +139,14 @@ const COLS = [
   {k:"fac",    label:"Ayahuasca", get:r=>r.facilitates_ayahuasca?1:0, num:true,
      cell:r=> r.facilitates_ayahuasca ? `<span class="pill">yes</span>` : `<span class="pill no">no/uncl.</span>`},
   {k:"aff",    label:"Affiliation", get:r=>affLabel(r.indigenous), cell:r=>esc(affLabel(r.indigenous))},
+  {k:"founded",label:"Founded", get:r=> (typeof r.year_founded==="number"?r.year_founded:99999), num:true,
+     cell:r=> (typeof r.year_founded==="number") ? String(r.year_founded) : `<span class="muted">—</span>`},
+  {k:"sourcing",label:"Sourcing", get:r=> (r.sourcing_claim||"").replace(/"/g,""),
+     cell:r=>{const s=(r.sourcing_claim||"").replace(/"/g,"");
+       if(!s||s==="none"||s==="unspecified") return `<span class="muted">${esc(s||"—")}</span>`;
+       return `<span class="pill">${esc(s.replace(/_/g," "))}</span>`;}},
+  {k:"recip",  label:"Reciprocity", get:r=> r.reciprocity_claim===true?1:0, num:true,
+     cell:r=> r.reciprocity_claim===true ? `<span class="pill">claimed</span>` : `<span class="muted">—</span>`},
   {k:"price",  label:"$/night", get:r=> r.price_night_min ?? r.price_night_max ?? -1, num:true,
      cell:r=>{const a=r.price_night_min,b=r.price_night_max; if(a==null&&b==null)return `<span class="muted">—</span>`;
        return `$${a??b}${b&&b!==a?`–${b}`:""}`;}},
@@ -151,6 +159,12 @@ const COLS = [
      cell:r=>genderStr(r.gender)},
   {k:"status", label:"Status", get:r=>r.status||"active",
      cell:r=> r.status && r.status!=="active" ? `<span class="pill no">${esc(r.status.replace(/_/g," "))}</span>` : "active"},
+  {k:"found",  label:"Found via", get:r=> arr(r.discovery_sources).join(","),
+     cell:r=>{const m={google_places:"places",web_search:"search",ayaadvisors:"ayaadvisors",
+       retreatguru:"retreat.guru",safe_ceremonies:"safe cer.",psychedelic_support:"psy.support",
+       thirdwave:"thirdwave",snowball:"snowball",native_term_sweep:"native"};
+       const s=arr(r.discovery_sources).map(x=>m[x]||x);
+       return s.length? s.map(x=>`<span class="pill">${esc(x)}</span>`).join(" ") : `<span class="muted">—</span>`;}},
 ];
 
 let sortK="name", dir=1;
