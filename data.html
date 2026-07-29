@@ -130,7 +130,9 @@ function genderStr(g){ if(!g) return "—"; const f=g.female||0,m=g.male||0,n=g.
 
 const COLS = [
   {k:"name",   label:"Name", cls:"name", get:r=>r.name||"—",
-     cell:r=> r.website ? `<a href="${esc(r.website)}" target="_blank" rel="noopener">${esc(r.name||"—")}</a>` : esc(r.name||"—")},
+     cell:r=>{const nm = r.website ? `<a href="${esc(r.website)}" target="_blank" rel="noopener">${esc(r.name||"—")}</a>` : esc(r.name||"—");
+       const arc = r.archive_url ? ` <a href="${esc(r.archive_url)}" target="_blank" rel="noopener" title="Wayback snapshot as crawled" style="font-size:11px;color:var(--faint)">⧉</a>` : "";
+       return nm+arc;}},
   {k:"country",label:"Country", get:r=>r.country||""},
   {k:"city",   label:"City", get:r=>r.city||"", cell:r=>esc(r.city||"—")},
   {k:"type",   label:"Type", get:r=>arr(r.org_type).join(", "),
