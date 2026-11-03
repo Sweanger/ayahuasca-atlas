@@ -17,8 +17,8 @@
   // ---- map ----------------------------------------------------------------
   const map = L.map("map", { worldCopyJump: true, scrollWheelZoom: true })
     .setView([5, -55], 3);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: '&copy; OpenStreetMap &copy; CARTO', subdomains: "abcd", maxZoom: 19,
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors", _subdomains: "abcd", maxZoom: 19,
   }).addTo(map);
   const cluster = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true });
   map.addLayer(cluster);
